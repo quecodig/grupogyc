@@ -1,0 +1,76 @@
+//Grid
+.#{$css-cont}{
+	width: $max-width;
+	padding: 0 0 10px 0;
+	max-width: 100%;
+}
+
+[class^=#{$css-grid}]{
+	float: left;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@for $i from 0 through 10 {
+	.padding-#{$i*5}{
+		padding: #{$i*5}px !important;
+	}
+	@for $b from 0 through 10 {
+		.padding-#{$i*5}-#{$b*50/10}{
+			padding: #{$i*5}px #{$b*50/10}px !important;
+		}
+	}
+}
+
+
+@for $i from 1 through 10 {
+	.#{$css-grid}-#{$i}{
+		width: percentage($i * 0.1);
+	}
+}
+
+//Responsive
+/* Media queries */
+@media only screen and (min-width: #{$max-width}) {
+	.#{$css-cont}{width:1200px;margin:0 auto;padding: 0;}
+}
+ 
+@media only screen and (max-width: 1200px) and (min-width: 980px) {
+	.#{$css-cont}{width:960px;margin:0 auto;padding: 0;}
+	@for $i from 1 through 5 {
+		.xl-#{$i}{
+			width: percentage($i * 10/100);
+		}
+	}
+}
+ 
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+	.#{$css-cont}{width:720px;margin:0 auto;padding: 0;}
+	@for $i from 1 through 5 {
+		.l-#{$i}{
+			width: percentage($i * 10/100);
+		}
+	}
+}
+ 
+@media only screen and (max-width: 479px) {
+	.#{$css-cont}{width:320px;margin:0 auto;padding: 0;}
+	[class*='#{$css-grid}'] {width:100%}
+	@for $i from 1 through 5 {
+		.m-#{$i}{
+			width: percentage($i * 10/100);
+		}
+	}
+}
+ 
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.#{$css-cont}{width:480px;margin:0 auto;padding: 0;}
+	[class*='#{$css-grid}'] {width:100%}
+	@for $i from 1 through 5 {
+		.s-#{$i}{
+			width: percentage($i * 10/100);
+		}
+	}
+}

@@ -1,0 +1,790 @@
+:root{
+	--bg-bar: #FFFFFF;
+	--height-bar: 80px;
+	--bg-page: #1C1A32;
+}
+@import "qc-grid";
+@import "qc.slider";
+
+@font-face {
+	font-family: "CenturyGothic";
+	src: url(../fonts/CenturyGothic.ttf) format('truetype');
+}
+
+body{
+	background: var(--bg-page);
+	font-family: CenturyGothic, "sans-serif";
+}
+
+.hidden{
+	display: none;
+	visibility: none;
+}
+
+header{
+	float: left;
+	width: 100%;
+	display: block;
+
+	ul{
+		margin: 0;
+		padding: 0;
+		float: left;
+		list-style: none;
+	}
+
+	.users{
+		margin: 0;
+		padding: 0;
+		float: left;
+		width: 100%;
+		display: block;
+		font-size: 17px;
+		background: var(--bg-bar);
+
+		ul.social li{
+			float: left;
+			color: #000000;
+			padding: 5px 10px;
+			display: inline-block;
+
+			@media only screen and (max-width: 766px){
+				padding: 5px;
+			}
+
+			a{
+				color: inherit;
+			}
+		}
+
+		ul.login{
+			float: right;
+			color: #000000;
+
+			li{
+				float: left;
+				margin-left: 5px;
+				background: #CCCCCC;
+				display: inline-block;
+			}
+
+			a{
+				padding: 5px;
+
+				i{
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+
+	.login a{
+		float: right;
+		padding: 10px;
+		color: inherit;
+		text-decoration: none;
+	}
+
+	.logos{
+
+		.logo{
+			float: left;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-height: var(--height-bar);	
+
+			img{
+				padding: 10px;
+				max-width: 100%;
+				max-height: calc( var(--height-bar) - 15px);
+			}
+		}
+	}
+
+	nav{
+		width: 100%;
+		float: left;
+		height: 40px;
+		display: block;
+		color: #000000;
+		background: var(--bg-bar);
+		box-shadow: 0px 3px 3px 0px #FFFFFF;
+
+		a.nav_collapse{
+			display: none;
+		}
+
+		ul{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			li{
+				position: relative;
+				transition: all 0.5s;
+				display: inline-block;
+				border-right: 1px solid #CCCCCC;
+
+				@media only screen and (max-width: 766px){
+					display: block;
+				}
+
+				&:hover{
+					background: #CCCCCC;
+				}
+
+				&:last-child{
+					border-right: none;
+				}
+
+				& > ul{
+					opacity: 0;
+					z-index: 99;
+					height: auto;
+					display: block;
+					position: absolute;
+					background: #FFFFFF;
+					transition: all 0.5s;
+
+					li{
+						width: 100%;
+						display: block;
+						border-bottom: 1px solid #CCCCCC;
+					}
+				}
+
+				&:hover > ul{
+					opacity: 1;
+				}
+
+				a{
+					padding: 10px;
+					display: block;
+					color: inherit;
+					font-size: 16px;
+					text-decoration: none;
+					text-transform: uppercase;
+
+					@media only screen and (max-width: 766px){
+						padding: 5px;
+					}
+				}
+			}
+		}
+	}
+	
+	@media only screen and (max-width: 766px){
+		.qcont{
+			width: 100%;
+			float: left;
+		}
+		.logos{
+			width: 100%;
+			float: left;
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+
+			.left{
+				grid-column: span 2;
+			}
+
+			.right{
+				grid-column: span 4;
+			}
+		}
+
+		nav{
+			float: left;
+			height: auto;
+			display: block;
+
+			a.nav_collapse{
+				display: flex;
+				color: #000000;
+				font-size: 40px;
+				align-items: center;
+				text-decoration: none;
+				justify-content: center;
+			}
+
+			ul{
+				width: 100%;
+				float: left;
+				height: auto;
+				z-index: 9999;
+				display: none;
+				text-align: center;
+				position: absolute;
+				background: #FFFFFF;
+				
+				li{
+					float: left;
+					width: 100%;
+					display: block;
+					border-top: 1px solid #CCCCCC;
+
+					& > ul{
+						opacity: 1;
+						display: block;
+						position: relative;
+
+						li:hover{
+							background: none;
+						}
+					}
+
+					a{
+						padding: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.br{
+	width: 100%;
+	float: left;
+	height: 1.2px;
+	display: block;
+	margin: 10px auto;
+	background: #CCCCCC;
+}
+
+
+main{
+	width: 100%;
+	float: left;
+	padding: 20px;
+	display: block;
+	position: relative;
+
+	@media only screen and (max-width: 766px){
+		padding: 5px;
+	}
+
+	&.home-page{
+		padding: 0;
+		background-image: url("../img/bg/bg-home.jpg");
+		background-position: center top;
+		background-attachment: cover;
+
+		&:before{
+			top: 0;
+			left: 0;
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			background: linear-gradient(to right, rgba(54, 53, 56, 0.7) 100%, transparent 80%);
+		}
+	}
+
+	.qcont{
+		position: relative;
+
+		@media only screen and (max-width: 766px){
+			width: 100%;
+		}
+
+		section.description,
+		section.form-login,
+		section.page-user,
+		section.locate{
+			z-index: 2;
+			width: 100%;
+			float: left;
+			margin: 0 auto;
+			position: relative;
+			text-align: center;
+			background: #FFFFFF;
+
+			@media only screen and (max-width: 766px){
+				width: 100%;
+			}
+
+			.content-columms{
+				z-index: 2;
+				float: left;
+				padding: 5px;
+				position: relative;
+				display: inline-block;
+
+				&.x1{
+					width: calc(60% - 10px);
+				}
+
+				&.x2{
+					width: calc(40% - 10px);
+				}
+
+				img{
+					width: 100%;
+					border-radius: 4px;
+					box-shadow: 3px 3px 3px #CCC;
+				}
+			}
+
+			p{
+				margin: 0;
+				padding: 0;
+			}
+
+			h1.title{
+				z-index: 2;
+				padding: 10px;
+				font-size: 24px;
+				text-align: left;
+				line-height: 1.25;
+				position: relative;
+				margin: 0 auto 25px;
+				letter-spacing: 2px;
+				border-bottom: 1px solid #aaaaaa;
+
+				span.date{
+					float: right;
+				}
+			}
+
+			&.description,
+			&.form-login{
+				background: url("../img/espacio.jpg") center;
+				background-size: cover;
+
+				&:before{
+					top: 0;
+					left: 0;
+					z-index: 1;
+					content: "";
+					width: 100%;
+					height: 100%;
+					position: absolute;
+					background: rgba(255,255,255,0.8);
+				}
+			}
+
+			&.description,
+			&.form-login,
+			&.page-user{
+				padding: 50px 60px;
+
+				@media only screen and (max-width: 766px){
+					padding: 50px 10px;
+				}
+			}
+
+			&.locate{
+				.mapouter{
+					width: 100%;
+					height: 500px;
+					position: relative;
+				}
+				.gmap_canvas{
+					width: 100%;
+					height: 500px;
+					overflow: hidden;
+					background: none !important;
+				}
+			}
+
+			&.form-login,
+			&.page-user{
+				text-align: left;
+
+				.form-content{
+					width: 80%;
+					margin: 0 auto;
+
+					&.pedidos{
+						width: 100%;
+					}
+
+					@media only screen and (max-width: 766px){
+						width: 100%;
+					}
+
+					.content-pedido{
+						width: 100%;
+						float: left;
+						display: block;
+						overflow-x: auto;
+						margin-bottom: 20px;
+						border: 1px solid #CCCCCC;
+						border-radius: 5px 5px 5px 5px;
+
+						table { 
+							width: 100%; 
+							border-collapse: collapse; 
+						}
+
+						tr:nth-of-type(odd){
+							background: #eee;
+						}
+
+						th{
+							color: white;
+							background: #333; 
+							font-weight: bold;
+						}
+
+						td, th{
+							padding: 6px;
+							text-align: left;
+							border: 1px solid #ccc;
+						}
+					}
+				}
+
+				a.forget{
+					float: right;
+					font-size: 14px;
+					color: steelblue;
+					font-weight: normal;
+					text-decoration: none;
+
+					@media only screen and (max-width: 766px){
+						padding: 10px;
+						display: block;
+					}
+				}
+
+				.btn-submit{
+					border: 0;
+					color: #FFFFFF;
+					padding: 10px 15px;
+					text-transform: uppercase;
+					background: var(--bg-page);
+				}
+
+				.jobs{
+
+					.job{
+						float: left;
+						padding: 5px;
+						display: block;
+						position: relative;
+						background: #FFFFFF;
+						border: 1px solid #CCCCCC;
+						box-shadow: 3px 3px 3px #CCCCCC;
+
+						h3.title{
+							margin: 0;
+							padding: 5px 0px;
+							color: var(--bg-page);
+						}
+					}
+
+					.btn{
+						margin: 5px;
+						float: left;
+						padding: 10px;
+						color: #FFFFFF;
+						text-decoration: none;
+						background: var(--bg-page);
+					}
+				}
+			}
+
+			&.page-user{
+				width: 100%;
+
+				.menu-user ul{
+					margin: 0;
+					padding: 0;
+					list-style: none;
+
+					li{
+						display: block;
+						border-bottom: 1px solid #CCCCCC;
+
+						a{
+							width: 100%;
+							padding: 5px;
+							color: inherit;
+							display: block;
+							transition: all 0.5s;
+							text-decoration: none;
+
+							&:hover,
+							&.active{
+								color: #CCCCCC;
+								padding: 5px 10px;
+							}
+						}
+					}
+				}
+
+				.data-display{
+					padding: 5px 10px;
+					border-left: 1px solid #CCCCCC;
+
+					@media only screen and (max-width: 766px){
+						padding: 5px;
+						border-left: none;
+					}
+
+					.doc{
+						float: left;
+						width: 100%;
+						display: block;
+						margin-bottom: 10px;
+						border: 1px solid #CCCCCC;
+
+						@media only screen and (max-width: 766px){
+							border: none;
+						}
+
+						.element{
+							width: 100%;
+							float: left;
+							display: block;
+							border-bottom: 1px solid #CCCCCC;
+
+							&:last-child{
+								border-bottom: none;
+							}
+
+							@media only screen and (max-width: 766px){
+								margin: 5px 0px;
+								border: 1px solid #CCCCCC;
+
+								&.title{
+									display: none;
+								}
+							}
+
+							.name,
+							.date{
+								padding: 10px;
+								border-right: 1px solid #CCCCCC;
+
+								@media only screen and (max-width: 766px){
+									border-right: 0;
+									border-bottom: 1px solid #CCCCCC;
+								}
+							}
+
+							&.title{
+								border: 1px solid #1A1A1A;
+
+								.name,
+								.date{
+									border-color: #1A1A1A;
+								}
+							}
+
+							.btn{
+								text-align: center;
+
+								a{
+									width: 100%;
+									padding: 10px;
+									display: block;
+									color: #FFFFFF;
+									font-weight: bold;
+									text-decoration: none;
+									text-transform: uppercase;
+									background: var(--bg-page);
+								}
+							}
+
+							.state{
+								padding: 10px;
+								color: #FFFFFF;
+
+								&.pending{
+									background: red;
+								}
+
+								&.send{
+									background: steelblue;
+								}
+
+								&.success{
+									background: green;
+								}
+							}
+						}
+					}
+
+					.embed{
+						float: left;
+						width: 100%;
+						height: auto;
+						margin: 10px;
+						padding: 10px;
+						display: block;
+
+						@media only screen and (max-width: 766px){
+							margin: 0;
+							padding: 0;
+						}
+					}
+				}
+			}
+
+			p{
+				text-align: justify;
+			}
+		}
+
+
+		section.page-user h1.title{
+			margin: 0;
+		}
+
+		.form-control{
+			outline: none;
+			color: #5f6a7d;
+			padding: 0 10px;
+			font-size: 13px;
+			min-height: 42px;
+			background: #fff;
+			line-height: 22px;
+			border-radius: 3px;
+			border: 1px solid #cccccc;
+		}
+	}
+}
+
+footer{
+	width: 100%;
+	float: left;
+	color: #FFFFFF;
+	display: block;
+
+	.footer-nav,
+	.footer-copy{
+		width: 100%;
+		float: left;
+		padding: 10px;
+		display: block;
+
+		.copyright{
+			text-align: center;
+		}
+
+		a{
+			width: auto;
+			color: inherit;
+			padding: 5px 10px;
+			transition: all 0.5s;
+			text-decoration: none;
+
+			&:hover{
+				color: #9C9C9C;
+			}
+		}
+	}
+
+	.footer-copy{
+		padding: 0px;
+		background: #1A1A1A;
+
+		@media only screen and (max-width: 766px){
+			margin: 0;
+			font-size: 13px;
+			display: inline-block;
+
+			.copyright{
+				padding: 0;
+				display: inline-block;
+
+				p{
+					margin: 0;
+					padding: 5px 0px;
+				}
+			}
+
+			a{
+				display: inline-block;
+			}
+		}
+	}
+
+	.qcol-2,
+	.qcol-3,
+	.qcol-4{
+		padding: 5px;
+		text-align: center;
+
+		img{
+			width: 50%;
+		}
+
+		ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			a{
+				display: block;
+			}
+		}
+	}
+
+	.logos{
+
+		ul li{
+			width: 50%;
+			float: left;
+			display: inline-block;
+			
+			a{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			img{
+				height: 100%;
+				max-width: 100%;
+				max-height: 75px;
+
+				&.talulah{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+}

@@ -1,0 +1,61 @@
+block config
+	- let pageName = "Inicio";
+	- let titleSite = "Grupo G&C";
+<!DOCTYPE html5>
+html(lang="es")
+	head
+		block head
+			meta(charset="UTF-8")
+			meta(property="og:type" content="website")
+			meta(name="MobileOptimized" content="width")
+			meta(name="viewport" content="width=device-width, initial-scale=1.0")
+			title= `${pageName} - ${titleSite}`
+			link(rel="stylesheet", href="assets/css/style.min.css?v=1.0.0.21")
+			link(rel="icon" type="image/png" href="assets/img/favicon.png")
+	body
+		include _menu
+		block content
+		footer
+			.footer-nav
+				.qcont
+					.qcol-4
+						img(src="assets/img/logos/logo_grupo_gyc.png", alt="Logo Grupo G Y C")
+					.qcol-2
+						ul
+							li
+								a(href="about.html") Quiénes Somos
+							li
+								a(href="mision.html") Misión
+							li
+								a(href="vision.html") Visión
+					.qcol-4.logos
+						ul
+							li
+								a(href="https://talulah.com.co/" target="_blank").logo
+									img(src="assets/img/logos/logo_talulah.png", alt="", class="talulah")
+							li
+								a(href="https://navala.com.co/" target="_blank").logo
+									img(src="assets/img/logos/logo_navala.png", alt="", class="navala")
+			.footer-copy
+				.qcont
+					.qcol-10.copyright
+						p Todos los derechos reservados &copy; Grupo G&C S.A.S
+
+		script(src="assets/js/jquery.min.js")
+		script.
+			$(document).ready(main);
+			var $win = $(window);
+			var contador = 0;
+			function main(){
+				$('#nav_mobile').on("click", function(){
+					var $posM = $('.navegation_menu').offset().top;
+					var $altM = $('.navegation_menu').height();
+					if ($win.scrollTop() <= $posM){
+						$('#nav-mobile').css('top', ($posM+$altM)).slideToggle("Slow");
+					}else{
+						$('#nav-mobile').css('top', ($altM)).slideToggle("Slow");
+					}
+					return false;
+				});
+			};
+		block JsFooter

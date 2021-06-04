@@ -1,0 +1,44 @@
+h2 Nuevo pedido
+p Recuerde tener sus datos actualizados, para evitar que no reciba sus pedidos.
+form(action="#", class="form-content pedidos" id="pedidos-user")
+	.content-pedido
+		table
+			thead
+				tr
+					th Código del artiulo
+					th Cantidad
+					th Buscar
+					th Nombre del artículo
+					th Precio
+					th Eliminar
+			tbody.element-clone
+				tr#div_0.form-group.hidden
+					td
+						input(type="text", name="materiales[]", class="form-control", placeholder="code")
+					td
+						input.form-control.cant-element(type="number", name="cant[]", min="1", pattern="^[0-9]+", placeholder="Cant.", style="width: 100px")
+					td
+						button(type="button", class="form-control")
+							i.qicon-search
+					td.name-element
+					td.price-element(data-price="0", data-total="0")
+						|0
+					td
+						button(type="button", id="1", class="form-control removeButton")
+							i.qicon-trash
+				tr
+					td(COLSPAN="4")
+					td
+						div Total: 
+							span.total-sum $ 0
+					td
+						button(type="button", id="sumar", class="form-control")
+							|Sumar
+		button(type="button", class="form-control addButton")
+			i.qicon-plus
+			|&nbsp;Añadir
+	.form-group
+		label(for="password") Contraseña
+		input(type="password", name="password", id="password", class="form-control")
+	.form-group
+		input(type="submit", value="Realizar pedido", class="btn-submit")

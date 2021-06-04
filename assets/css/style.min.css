@@ -1,0 +1,5174 @@
+@charset "UTF-8";
+:root {
+  --bg-bar: #FFFFFF;
+  --height-bar: 80px;
+  --bg-page: #1C1A32;
+}
+
+*, div, article, aside, figure {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type=checkbox],
+input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+.center {
+  clear: both;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  align-items: center;
+  align-content: center;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  -ms-flex-line-pack: center;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.full {
+  width: 100%;
+  clear: both;
+}
+
+.center-text,
+.text-center {
+  text-align: center;
+}
+
+.left-text,
+.text-left {
+  text-align: left;
+}
+
+.right-text,
+.text-right {
+  text-align: right;
+}
+
+.dp-none {
+  display: none;
+  visibility: none;
+}
+
+.dp-block {
+  display: block;
+}
+
+.dp-inline {
+  display: inline;
+}
+
+.dp-inline-block {
+  display: inline-block;
+}
+
+.dp-grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.dp-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: inherit;
+  color: #333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type=search] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  margin: 4px 0 0;
+  margin-top: 1px \9 ;
+  line-height: normal;
+}
+
+input[type=file] {
+  display: block;
+}
+
+input[type=range] {
+  display: block;
+  width: 100%;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+input[type=file]:focus,
+input[type=radio]:focus,
+input[type=checkbox]:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+output {
+  display: block;
+  padding-top: 7px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+}
+
+.form-control:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.form-control::-moz-placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #999;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #999;
+}
+
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  background-color: #eee;
+  opacity: 1;
+}
+
+.form-control[disabled],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type=date].form-control,
+input[type=time].form-control,
+input[type=datetime-local].form-control,
+input[type=month].form-control {
+    line-height: 34px;
+  }
+
+  input[type=date].input-sm,
+input[type=time].input-sm,
+input[type=datetime-local].input-sm,
+input[type=month].input-sm,
+.input-group-sm input[type=date],
+.input-group-sm input[type=time],
+.input-group-sm input[type=datetime-local],
+.input-group-sm input[type=month] {
+    line-height: 30px;
+  }
+
+  input[type=date].input-lg,
+input[type=time].input-lg,
+input[type=datetime-local].input-lg,
+input[type=month].input-lg,
+.input-group-lg input[type=date],
+.input-group-lg input[type=time],
+.input-group-lg input[type=datetime-local],
+.input-group-lg input[type=month] {
+    line-height: 46px;
+  }
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+.radio,
+.checkbox {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.radio label,
+.checkbox label {
+  min-height: 20px;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.qcont {
+  width: 1200px;
+  padding: 0 0 10px 0;
+  max-width: 100%;
+}
+
+[class^=qcol] {
+  float: left;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.padding-0 {
+  padding: 0px !important;
+}
+
+.padding-0-0 {
+  padding: 0px 0px !important;
+}
+
+.padding-0-5 {
+  padding: 0px 5px !important;
+}
+
+.padding-0-10 {
+  padding: 0px 10px !important;
+}
+
+.padding-0-15 {
+  padding: 0px 15px !important;
+}
+
+.padding-0-20 {
+  padding: 0px 20px !important;
+}
+
+.padding-0-25 {
+  padding: 0px 25px !important;
+}
+
+.padding-0-30 {
+  padding: 0px 30px !important;
+}
+
+.padding-0-35 {
+  padding: 0px 35px !important;
+}
+
+.padding-0-40 {
+  padding: 0px 40px !important;
+}
+
+.padding-0-45 {
+  padding: 0px 45px !important;
+}
+
+.padding-0-50 {
+  padding: 0px 50px !important;
+}
+
+.padding-5 {
+  padding: 5px !important;
+}
+
+.padding-5-0 {
+  padding: 5px 0px !important;
+}
+
+.padding-5-5 {
+  padding: 5px 5px !important;
+}
+
+.padding-5-10 {
+  padding: 5px 10px !important;
+}
+
+.padding-5-15 {
+  padding: 5px 15px !important;
+}
+
+.padding-5-20 {
+  padding: 5px 20px !important;
+}
+
+.padding-5-25 {
+  padding: 5px 25px !important;
+}
+
+.padding-5-30 {
+  padding: 5px 30px !important;
+}
+
+.padding-5-35 {
+  padding: 5px 35px !important;
+}
+
+.padding-5-40 {
+  padding: 5px 40px !important;
+}
+
+.padding-5-45 {
+  padding: 5px 45px !important;
+}
+
+.padding-5-50 {
+  padding: 5px 50px !important;
+}
+
+.padding-10 {
+  padding: 10px !important;
+}
+
+.padding-10-0 {
+  padding: 10px 0px !important;
+}
+
+.padding-10-5 {
+  padding: 10px 5px !important;
+}
+
+.padding-10-10 {
+  padding: 10px 10px !important;
+}
+
+.padding-10-15 {
+  padding: 10px 15px !important;
+}
+
+.padding-10-20 {
+  padding: 10px 20px !important;
+}
+
+.padding-10-25 {
+  padding: 10px 25px !important;
+}
+
+.padding-10-30 {
+  padding: 10px 30px !important;
+}
+
+.padding-10-35 {
+  padding: 10px 35px !important;
+}
+
+.padding-10-40 {
+  padding: 10px 40px !important;
+}
+
+.padding-10-45 {
+  padding: 10px 45px !important;
+}
+
+.padding-10-50 {
+  padding: 10px 50px !important;
+}
+
+.padding-15 {
+  padding: 15px !important;
+}
+
+.padding-15-0 {
+  padding: 15px 0px !important;
+}
+
+.padding-15-5 {
+  padding: 15px 5px !important;
+}
+
+.padding-15-10 {
+  padding: 15px 10px !important;
+}
+
+.padding-15-15 {
+  padding: 15px 15px !important;
+}
+
+.padding-15-20 {
+  padding: 15px 20px !important;
+}
+
+.padding-15-25 {
+  padding: 15px 25px !important;
+}
+
+.padding-15-30 {
+  padding: 15px 30px !important;
+}
+
+.padding-15-35 {
+  padding: 15px 35px !important;
+}
+
+.padding-15-40 {
+  padding: 15px 40px !important;
+}
+
+.padding-15-45 {
+  padding: 15px 45px !important;
+}
+
+.padding-15-50 {
+  padding: 15px 50px !important;
+}
+
+.padding-20 {
+  padding: 20px !important;
+}
+
+.padding-20-0 {
+  padding: 20px 0px !important;
+}
+
+.padding-20-5 {
+  padding: 20px 5px !important;
+}
+
+.padding-20-10 {
+  padding: 20px 10px !important;
+}
+
+.padding-20-15 {
+  padding: 20px 15px !important;
+}
+
+.padding-20-20 {
+  padding: 20px 20px !important;
+}
+
+.padding-20-25 {
+  padding: 20px 25px !important;
+}
+
+.padding-20-30 {
+  padding: 20px 30px !important;
+}
+
+.padding-20-35 {
+  padding: 20px 35px !important;
+}
+
+.padding-20-40 {
+  padding: 20px 40px !important;
+}
+
+.padding-20-45 {
+  padding: 20px 45px !important;
+}
+
+.padding-20-50 {
+  padding: 20px 50px !important;
+}
+
+.padding-25 {
+  padding: 25px !important;
+}
+
+.padding-25-0 {
+  padding: 25px 0px !important;
+}
+
+.padding-25-5 {
+  padding: 25px 5px !important;
+}
+
+.padding-25-10 {
+  padding: 25px 10px !important;
+}
+
+.padding-25-15 {
+  padding: 25px 15px !important;
+}
+
+.padding-25-20 {
+  padding: 25px 20px !important;
+}
+
+.padding-25-25 {
+  padding: 25px 25px !important;
+}
+
+.padding-25-30 {
+  padding: 25px 30px !important;
+}
+
+.padding-25-35 {
+  padding: 25px 35px !important;
+}
+
+.padding-25-40 {
+  padding: 25px 40px !important;
+}
+
+.padding-25-45 {
+  padding: 25px 45px !important;
+}
+
+.padding-25-50 {
+  padding: 25px 50px !important;
+}
+
+.padding-30 {
+  padding: 30px !important;
+}
+
+.padding-30-0 {
+  padding: 30px 0px !important;
+}
+
+.padding-30-5 {
+  padding: 30px 5px !important;
+}
+
+.padding-30-10 {
+  padding: 30px 10px !important;
+}
+
+.padding-30-15 {
+  padding: 30px 15px !important;
+}
+
+.padding-30-20 {
+  padding: 30px 20px !important;
+}
+
+.padding-30-25 {
+  padding: 30px 25px !important;
+}
+
+.padding-30-30 {
+  padding: 30px 30px !important;
+}
+
+.padding-30-35 {
+  padding: 30px 35px !important;
+}
+
+.padding-30-40 {
+  padding: 30px 40px !important;
+}
+
+.padding-30-45 {
+  padding: 30px 45px !important;
+}
+
+.padding-30-50 {
+  padding: 30px 50px !important;
+}
+
+.padding-35 {
+  padding: 35px !important;
+}
+
+.padding-35-0 {
+  padding: 35px 0px !important;
+}
+
+.padding-35-5 {
+  padding: 35px 5px !important;
+}
+
+.padding-35-10 {
+  padding: 35px 10px !important;
+}
+
+.padding-35-15 {
+  padding: 35px 15px !important;
+}
+
+.padding-35-20 {
+  padding: 35px 20px !important;
+}
+
+.padding-35-25 {
+  padding: 35px 25px !important;
+}
+
+.padding-35-30 {
+  padding: 35px 30px !important;
+}
+
+.padding-35-35 {
+  padding: 35px 35px !important;
+}
+
+.padding-35-40 {
+  padding: 35px 40px !important;
+}
+
+.padding-35-45 {
+  padding: 35px 45px !important;
+}
+
+.padding-35-50 {
+  padding: 35px 50px !important;
+}
+
+.padding-40 {
+  padding: 40px !important;
+}
+
+.padding-40-0 {
+  padding: 40px 0px !important;
+}
+
+.padding-40-5 {
+  padding: 40px 5px !important;
+}
+
+.padding-40-10 {
+  padding: 40px 10px !important;
+}
+
+.padding-40-15 {
+  padding: 40px 15px !important;
+}
+
+.padding-40-20 {
+  padding: 40px 20px !important;
+}
+
+.padding-40-25 {
+  padding: 40px 25px !important;
+}
+
+.padding-40-30 {
+  padding: 40px 30px !important;
+}
+
+.padding-40-35 {
+  padding: 40px 35px !important;
+}
+
+.padding-40-40 {
+  padding: 40px 40px !important;
+}
+
+.padding-40-45 {
+  padding: 40px 45px !important;
+}
+
+.padding-40-50 {
+  padding: 40px 50px !important;
+}
+
+.padding-45 {
+  padding: 45px !important;
+}
+
+.padding-45-0 {
+  padding: 45px 0px !important;
+}
+
+.padding-45-5 {
+  padding: 45px 5px !important;
+}
+
+.padding-45-10 {
+  padding: 45px 10px !important;
+}
+
+.padding-45-15 {
+  padding: 45px 15px !important;
+}
+
+.padding-45-20 {
+  padding: 45px 20px !important;
+}
+
+.padding-45-25 {
+  padding: 45px 25px !important;
+}
+
+.padding-45-30 {
+  padding: 45px 30px !important;
+}
+
+.padding-45-35 {
+  padding: 45px 35px !important;
+}
+
+.padding-45-40 {
+  padding: 45px 40px !important;
+}
+
+.padding-45-45 {
+  padding: 45px 45px !important;
+}
+
+.padding-45-50 {
+  padding: 45px 50px !important;
+}
+
+.padding-50 {
+  padding: 50px !important;
+}
+
+.padding-50-0 {
+  padding: 50px 0px !important;
+}
+
+.padding-50-5 {
+  padding: 50px 5px !important;
+}
+
+.padding-50-10 {
+  padding: 50px 10px !important;
+}
+
+.padding-50-15 {
+  padding: 50px 15px !important;
+}
+
+.padding-50-20 {
+  padding: 50px 20px !important;
+}
+
+.padding-50-25 {
+  padding: 50px 25px !important;
+}
+
+.padding-50-30 {
+  padding: 50px 30px !important;
+}
+
+.padding-50-35 {
+  padding: 50px 35px !important;
+}
+
+.padding-50-40 {
+  padding: 50px 40px !important;
+}
+
+.padding-50-45 {
+  padding: 50px 45px !important;
+}
+
+.padding-50-50 {
+  padding: 50px 50px !important;
+}
+
+.qcol-1 {
+  width: 10%;
+}
+
+.qcol-2 {
+  width: 20%;
+}
+
+.qcol-3 {
+  width: 30%;
+}
+
+.qcol-4 {
+  width: 40%;
+}
+
+.qcol-5 {
+  width: 50%;
+}
+
+.qcol-6 {
+  width: 60%;
+}
+
+.qcol-7 {
+  width: 70%;
+}
+
+.qcol-8 {
+  width: 80%;
+}
+
+.qcol-9 {
+  width: 90%;
+}
+
+.qcol-10 {
+  width: 100%;
+}
+
+/* Media queries */
+@media only screen and (min-width: 1200px) {
+  .qcont {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 1200px) and (min-width: 980px) {
+  .qcont {
+    width: 960px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .xl-1 {
+    width: 10%;
+  }
+
+  .xl-2 {
+    width: 20%;
+  }
+
+  .xl-3 {
+    width: 30%;
+  }
+
+  .xl-4 {
+    width: 40%;
+  }
+
+  .xl-5 {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  .qcont {
+    width: 720px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .l-1 {
+    width: 10%;
+  }
+
+  .l-2 {
+    width: 20%;
+  }
+
+  .l-3 {
+    width: 30%;
+  }
+
+  .l-4 {
+    width: 40%;
+  }
+
+  .l-5 {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .qcont {
+    width: 320px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  [class*=qcol] {
+    width: 100%;
+  }
+
+  .m-1 {
+    width: 10%;
+  }
+
+  .m-2 {
+    width: 20%;
+  }
+
+  .m-3 {
+    width: 30%;
+  }
+
+  .m-4 {
+    width: 40%;
+  }
+
+  .m-5 {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .qcont {
+    width: 480px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  [class*=qcol] {
+    width: 100%;
+  }
+
+  .s-1 {
+    width: 10%;
+  }
+
+  .s-2 {
+    width: 20%;
+  }
+
+  .s-3 {
+    width: 30%;
+  }
+
+  .s-4 {
+    width: 40%;
+  }
+
+  .s-5 {
+    width: 50%;
+  }
+}
+@font-face {
+  font-family: "qicon";
+  src: url(../fonts/qicon-webfont.eot?v=4.7.0);
+  src: url(../fonts/qicon-webfont.eot?v=4.7.0#iefix) format("embedded-opentype"), url(../fonts/qicon-webfont.woff2?v=4.7.0) format("woff2"), url(../fonts/qicon-webfont.woff?v=4.7.0) format("woff"), url(../fonts/qicon-webfont.ttf?v=4.7.0) format("truetype"), url(../fonts/qicon-webfont.svg?v=4.7.0#fontawesomeregular) format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^=qicon],
+[class*=qicon] {
+  display: inline-block;
+  font: normal normal normal 14px/1 qicon;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^=qicon]:before,
+[class*=qicon]:before {
+  margin-left: 2px;
+  margin-right: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+.qicon-glass:before {
+  content: "";
+}
+
+.qicon-music:before {
+  content: "";
+}
+
+.qicon-search:before {
+  content: "";
+}
+
+.qicon-envelope-o:before {
+  content: "";
+}
+
+.qicon-heart:before {
+  content: "";
+}
+
+.qicon-star:before {
+  content: "";
+}
+
+.qicon-star-o:before {
+  content: "";
+}
+
+.qicon-user:before {
+  content: "";
+}
+
+.qicon-film:before {
+  content: "";
+}
+
+.qicon-th-large:before {
+  content: "";
+}
+
+.qicon-th:before {
+  content: "";
+}
+
+.qicon-th-list:before {
+  content: "";
+}
+
+.qicon-check:before {
+  content: "";
+}
+
+.qicon-remove:before,
+.qicon-close:before,
+.qicon-times:before {
+  content: "";
+}
+
+.qicon-search-plus:before {
+  content: "";
+}
+
+.qicon-search-minus:before {
+  content: "";
+}
+
+.qicon-power-off:before {
+  content: "";
+}
+
+.qicon-signal:before {
+  content: "";
+}
+
+.qicon-gear:before,
+.qicon-cog:before {
+  content: "";
+}
+
+.qicon-trash-o:before {
+  content: "";
+}
+
+.qicon-home:before {
+  content: "";
+}
+
+.qicon-file-o:before {
+  content: "";
+}
+
+.qicon-clock-o:before {
+  content: "";
+}
+
+.qicon-road:before {
+  content: "";
+}
+
+.qicon-download:before {
+  content: "";
+}
+
+.qicon-arrow-circle-o-down:before {
+  content: "";
+}
+
+.qicon-arrow-circle-o-up:before {
+  content: "";
+}
+
+.qicon-inbox:before {
+  content: "";
+}
+
+.qicon-play-circle-o:before {
+  content: "";
+}
+
+.qicon-rotate-right:before,
+.qicon-repeat:before {
+  content: "";
+}
+
+.qicon-refresh:before {
+  content: "";
+}
+
+.qicon-list-alt:before {
+  content: "";
+}
+
+.qicon-lock:before {
+  content: "";
+}
+
+.qicon-flag:before {
+  content: "";
+}
+
+.qicon-headphones:before {
+  content: "";
+}
+
+.qicon-volume-off:before {
+  content: "";
+}
+
+.qicon-volume-down:before {
+  content: "";
+}
+
+.qicon-volume-up:before {
+  content: "";
+}
+
+.qicon-qrcode:before {
+  content: "";
+}
+
+.qicon-barcode:before {
+  content: "";
+}
+
+.qicon-tag:before {
+  content: "";
+}
+
+.qicon-tags:before {
+  content: "";
+}
+
+.qicon-book:before {
+  content: "";
+}
+
+.qicon-bookmark:before {
+  content: "";
+}
+
+.qicon-print:before {
+  content: "";
+}
+
+.qicon-camera:before {
+  content: "";
+}
+
+.qicon-font:before {
+  content: "";
+}
+
+.qicon-bold:before {
+  content: "";
+}
+
+.qicon-italic:before {
+  content: "";
+}
+
+.qicon-text-height:before {
+  content: "";
+}
+
+.qicon-text-width:before {
+  content: "";
+}
+
+.qicon-align-left:before {
+  content: "";
+}
+
+.qicon-align-center:before {
+  content: "";
+}
+
+.qicon-align-right:before {
+  content: "";
+}
+
+.qicon-align-justify:before {
+  content: "";
+}
+
+.qicon-list:before {
+  content: "";
+}
+
+.qicon-dedent:before,
+.qicon-outdent:before {
+  content: "";
+}
+
+.qicon-indent:before {
+  content: "";
+}
+
+.qicon-video-camera:before {
+  content: "";
+}
+
+.qicon-photo:before,
+.qicon-image:before,
+.qicon-picture-o:before {
+  content: "";
+}
+
+.qicon-pencil:before {
+  content: "";
+}
+
+.qicon-map-marker:before {
+  content: "";
+}
+
+.qicon-adjust:before {
+  content: "";
+}
+
+.qicon-tint:before {
+  content: "";
+}
+
+.qicon-edit:before,
+.qicon-pencil-square-o:before {
+  content: "";
+}
+
+.qicon-share-square-o:before {
+  content: "";
+}
+
+.qicon-check-square-o:before {
+  content: "";
+}
+
+.qicon-arrows:before {
+  content: "";
+}
+
+.qicon-step-backward:before {
+  content: "";
+}
+
+.qicon-fast-backward:before {
+  content: "";
+}
+
+.qicon-backward:before {
+  content: "";
+}
+
+.qicon-play:before {
+  content: "";
+}
+
+.qicon-pause:before {
+  content: "";
+}
+
+.qicon-stop:before {
+  content: "";
+}
+
+.qicon-forward:before {
+  content: "";
+}
+
+.qicon-fast-forward:before {
+  content: "";
+}
+
+.qicon-step-forward:before {
+  content: "";
+}
+
+.qicon-eject:before {
+  content: "";
+}
+
+.qicon-chevron-left:before {
+  content: "";
+}
+
+.qicon-chevron-right:before {
+  content: "";
+}
+
+.qicon-plus-circle:before {
+  content: "";
+}
+
+.qicon-minus-circle:before {
+  content: "";
+}
+
+.qicon-times-circle:before {
+  content: "";
+}
+
+.qicon-check-circle:before {
+  content: "";
+}
+
+.qicon-question-circle:before {
+  content: "";
+}
+
+.qicon-info-circle:before {
+  content: "";
+}
+
+.qicon-crosshairs:before {
+  content: "";
+}
+
+.qicon-times-circle-o:before {
+  content: "";
+}
+
+.qicon-check-circle-o:before {
+  content: "";
+}
+
+.qicon-ban:before {
+  content: "";
+}
+
+.qicon-arrow-left:before {
+  content: "";
+}
+
+.qicon-arrow-right:before {
+  content: "";
+}
+
+.qicon-arrow-up:before {
+  content: "";
+}
+
+.qicon-arrow-down:before {
+  content: "";
+}
+
+.qicon-mail-forward:before,
+.qicon-share:before {
+  content: "";
+}
+
+.qicon-expand:before {
+  content: "";
+}
+
+.qicon-compress:before {
+  content: "";
+}
+
+.qicon-plus:before {
+  content: "";
+}
+
+.qicon-minus:before {
+  content: "";
+}
+
+.qicon-asterisk:before {
+  content: "";
+}
+
+.qicon-exclamation-circle:before {
+  content: "";
+}
+
+.qicon-gift:before {
+  content: "";
+}
+
+.qicon-leaf:before {
+  content: "";
+}
+
+.qicon-fire:before {
+  content: "";
+}
+
+.qicon-eye:before {
+  content: "";
+}
+
+.qicon-eye-slash:before {
+  content: "";
+}
+
+.qicon-warning:before,
+.qicon-exclamation-triangle:before {
+  content: "";
+}
+
+.qicon-plane:before {
+  content: "";
+}
+
+.qicon-calendar:before {
+  content: "";
+}
+
+.qicon-random:before {
+  content: "";
+}
+
+.qicon-comment:before {
+  content: "";
+}
+
+.qicon-magnet:before {
+  content: "";
+}
+
+.qicon-chevron-up:before {
+  content: "";
+}
+
+.qicon-chevron-down:before {
+  content: "";
+}
+
+.qicon-retweet:before {
+  content: "";
+}
+
+.qicon-shopping-cart:before {
+  content: "";
+}
+
+.qicon-folder:before {
+  content: "";
+}
+
+.qicon-folder-open:before {
+  content: "";
+}
+
+.qicon-arrows-v:before {
+  content: "";
+}
+
+.qicon-arrows-h:before {
+  content: "";
+}
+
+.qicon-bar-chart-o:before,
+.qicon-bar-chart:before {
+  content: "";
+}
+
+.qicon-twitter-square:before {
+  content: "";
+}
+
+.qicon-facebook-square:before {
+  content: "";
+}
+
+.qicon-camera-retro:before {
+  content: "";
+}
+
+.qicon-key:before {
+  content: "";
+}
+
+.qicon-gears:before,
+.qicon-cogs:before {
+  content: "";
+}
+
+.qicon-comments:before {
+  content: "";
+}
+
+.qicon-thumbs-o-up:before {
+  content: "";
+}
+
+.qicon-thumbs-o-down:before {
+  content: "";
+}
+
+.qicon-star-half:before {
+  content: "";
+}
+
+.qicon-heart-o:before {
+  content: "";
+}
+
+.qicon-sign-out:before {
+  content: "";
+}
+
+.qicon-linkedin-square:before {
+  content: "";
+}
+
+.qicon-thumb-tack:before {
+  content: "";
+}
+
+.qicon-external-link:before {
+  content: "";
+}
+
+.qicon-sign-in:before {
+  content: "";
+}
+
+.qicon-trophy:before {
+  content: "";
+}
+
+.qicon-github-square:before {
+  content: "";
+}
+
+.qicon-upload:before {
+  content: "";
+}
+
+.qicon-lemon-o:before {
+  content: "";
+}
+
+.qicon-phone:before {
+  content: "";
+}
+
+.qicon-square-o:before {
+  content: "";
+}
+
+.qicon-bookmark-o:before {
+  content: "";
+}
+
+.qicon-phone-square:before {
+  content: "";
+}
+
+.qicon-twitter:before {
+  content: "";
+}
+
+.qicon-facebook-f:before,
+.qicon-facebook:before {
+  content: "";
+}
+
+.qicon-github:before {
+  content: "";
+}
+
+.qicon-unlock:before {
+  content: "";
+}
+
+.qicon-credit-card:before {
+  content: "";
+}
+
+.qicon-feed:before,
+.qicon-rss:before {
+  content: "";
+}
+
+.qicon-hdd-o:before {
+  content: "";
+}
+
+.qicon-bullhorn:before {
+  content: "";
+}
+
+.qicon-bell:before {
+  content: "";
+}
+
+.qicon-certificate:before {
+  content: "";
+}
+
+.qicon-hand-o-right:before {
+  content: "";
+}
+
+.qicon-hand-o-left:before {
+  content: "";
+}
+
+.qicon-hand-o-up:before {
+  content: "";
+}
+
+.qicon-hand-o-down:before {
+  content: "";
+}
+
+.qicon-arrow-circle-left:before {
+  content: "";
+}
+
+.qicon-arrow-circle-right:before {
+  content: "";
+}
+
+.qicon-arrow-circle-up:before {
+  content: "";
+}
+
+.qicon-arrow-circle-down:before {
+  content: "";
+}
+
+.qicon-globe:before {
+  content: "";
+}
+
+.qicon-wrench:before {
+  content: "";
+}
+
+.qicon-tasks:before {
+  content: "";
+}
+
+.qicon-filter:before {
+  content: "";
+}
+
+.qicon-briefcase:before {
+  content: "";
+}
+
+.qicon-arrows-alt:before {
+  content: "";
+}
+
+.qicon-group:before,
+.qicon-users:before {
+  content: "";
+}
+
+.qicon-chain:before,
+.qicon-link:before {
+  content: "";
+}
+
+.qicon-cloud:before {
+  content: "";
+}
+
+.qicon-flask:before {
+  content: "";
+}
+
+.qicon-cut:before,
+.qicon-scissors:before {
+  content: "";
+}
+
+.qicon-copy:before,
+.qicon-files-o:before {
+  content: "";
+}
+
+.qicon-paperclip:before {
+  content: "";
+}
+
+.qicon-save:before,
+.qicon-floppy-o:before {
+  content: "";
+}
+
+.qicon-square:before {
+  content: "";
+}
+
+.qicon-navicon:before,
+.qicon-reorder:before,
+.qicon-bars:before {
+  content: "";
+}
+
+.qicon-list-ul:before {
+  content: "";
+}
+
+.qicon-list-ol:before {
+  content: "";
+}
+
+.qicon-strikethrough:before {
+  content: "";
+}
+
+.qicon-underline:before {
+  content: "";
+}
+
+.qicon-table:before {
+  content: "";
+}
+
+.qicon-magic:before {
+  content: "";
+}
+
+.qicon-truck:before {
+  content: "";
+}
+
+.qicon-pinterest:before {
+  content: "";
+}
+
+.qicon-pinterest-square:before {
+  content: "";
+}
+
+.qicon-google-plus-square:before {
+  content: "";
+}
+
+.qicon-google-plus:before {
+  content: "";
+}
+
+.qicon-money:before {
+  content: "";
+}
+
+.qicon-caret-down:before {
+  content: "";
+}
+
+.qicon-caret-up:before {
+  content: "";
+}
+
+.qicon-caret-left:before {
+  content: "";
+}
+
+.qicon-caret-right:before {
+  content: "";
+}
+
+.qicon-columns:before {
+  content: "";
+}
+
+.qicon-unsorted:before,
+.qicon-sort:before {
+  content: "";
+}
+
+.qicon-sort-down:before,
+.qicon-sort-desc:before {
+  content: "";
+}
+
+.qicon-sort-up:before,
+.qicon-sort-asc:before {
+  content: "";
+}
+
+.qicon-envelope:before {
+  content: "";
+}
+
+.qicon-linkedin:before {
+  content: "";
+}
+
+.qicon-rotate-left:before,
+.qicon-undo:before {
+  content: "";
+}
+
+.qicon-legal:before,
+.qicon-gavel:before {
+  content: "";
+}
+
+.qicon-dashboard:before,
+.qicon-tachometer:before {
+  content: "";
+}
+
+.qicon-comment-o:before {
+  content: "";
+}
+
+.qicon-comments-o:before {
+  content: "";
+}
+
+.qicon-flash:before,
+.qicon-bolt:before {
+  content: "";
+}
+
+.qicon-sitemap:before {
+  content: "";
+}
+
+.qicon-umbrella:before {
+  content: "";
+}
+
+.qicon-paste:before,
+.qicon-clipboard:before {
+  content: "";
+}
+
+.qicon-lightbulb-o:before {
+  content: "";
+}
+
+.qicon-exchange:before {
+  content: "";
+}
+
+.qicon-cloud-download:before {
+  content: "";
+}
+
+.qicon-cloud-upload:before {
+  content: "";
+}
+
+.qicon-user-md:before {
+  content: "";
+}
+
+.qicon-stethoscope:before {
+  content: "";
+}
+
+.qicon-suitcase:before {
+  content: "";
+}
+
+.qicon-bell-o:before {
+  content: "";
+}
+
+.qicon-coffee:before {
+  content: "";
+}
+
+.qicon-cutlery:before {
+  content: "";
+}
+
+.qicon-file-text-o:before {
+  content: "";
+}
+
+.qicon-building-o:before {
+  content: "";
+}
+
+.qicon-hospital-o:before {
+  content: "";
+}
+
+.qicon-ambulance:before {
+  content: "";
+}
+
+.qicon-medkit:before {
+  content: "";
+}
+
+.qicon-fighter-jet:before {
+  content: "";
+}
+
+.qicon-beer:before {
+  content: "";
+}
+
+.qicon-h-square:before {
+  content: "";
+}
+
+.qicon-plus-square:before {
+  content: "";
+}
+
+.qicon-angle-double-left:before {
+  content: "";
+}
+
+.qicon-angle-double-right:before {
+  content: "";
+}
+
+.qicon-angle-double-up:before {
+  content: "";
+}
+
+.qicon-angle-double-down:before {
+  content: "";
+}
+
+.qicon-angle-left:before {
+  content: "";
+}
+
+.qicon-angle-right:before {
+  content: "";
+}
+
+.qicon-angle-up:before {
+  content: "";
+}
+
+.qicon-angle-down:before {
+  content: "";
+}
+
+.qicon-desktop:before {
+  content: "";
+}
+
+.qicon-laptop:before {
+  content: "";
+}
+
+.qicon-tablet:before {
+  content: "";
+}
+
+.qicon-mobile-phone:before,
+.qicon-mobile:before {
+  content: "";
+}
+
+.qicon-circle-o:before {
+  content: "";
+}
+
+.qicon-quote-left:before {
+  content: "";
+}
+
+.qicon-quote-right:before {
+  content: "";
+}
+
+.qicon-spinner:before {
+  content: "";
+}
+
+.qicon-circle:before {
+  content: "";
+}
+
+.qicon-mail-reply:before,
+.qicon-reply:before {
+  content: "";
+}
+
+.qicon-github-alt:before {
+  content: "";
+}
+
+.qicon-folder-o:before {
+  content: "";
+}
+
+.qicon-folder-open-o:before {
+  content: "";
+}
+
+.qicon-smile-o:before {
+  content: "";
+}
+
+.qicon-frown-o:before {
+  content: "";
+}
+
+.qicon-meh-o:before {
+  content: "";
+}
+
+.qicon-gamepad:before {
+  content: "";
+}
+
+.qicon-keyboard-o:before {
+  content: "";
+}
+
+.qicon-flag-o:before {
+  content: "";
+}
+
+.qicon-flag-checkered:before {
+  content: "";
+}
+
+.qicon-terminal:before {
+  content: "";
+}
+
+.qicon-code:before {
+  content: "";
+}
+
+.qicon-mail-reply-all:before,
+.qicon-reply-all:before {
+  content: "";
+}
+
+.qicon-star-half-empty:before,
+.qicon-star-half-full:before,
+.qicon-star-half-o:before {
+  content: "";
+}
+
+.qicon-location-arrow:before {
+  content: "";
+}
+
+.qicon-crop:before {
+  content: "";
+}
+
+.qicon-code-fork:before {
+  content: "";
+}
+
+.qicon-unlink:before,
+.qicon-chain-broken:before {
+  content: "";
+}
+
+.qicon-question:before {
+  content: "";
+}
+
+.qicon-info:before {
+  content: "";
+}
+
+.qicon-exclamation:before {
+  content: "";
+}
+
+.qicon-superscript:before {
+  content: "";
+}
+
+.qicon-subscript:before {
+  content: "";
+}
+
+.qicon-eraser:before {
+  content: "";
+}
+
+.qicon-puzzle-piece:before {
+  content: "";
+}
+
+.qicon-microphone:before {
+  content: "";
+}
+
+.qicon-microphone-slash:before {
+  content: "";
+}
+
+.qicon-shield:before {
+  content: "";
+}
+
+.qicon-calendar-o:before {
+  content: "";
+}
+
+.qicon-fire-extinguisher:before {
+  content: "";
+}
+
+.qicon-rocket:before {
+  content: "";
+}
+
+.qicon-maxcdn:before {
+  content: "";
+}
+
+.qicon-chevron-circle-left:before {
+  content: "";
+}
+
+.qicon-chevron-circle-right:before {
+  content: "";
+}
+
+.qicon-chevron-circle-up:before {
+  content: "";
+}
+
+.qicon-chevron-circle-down:before {
+  content: "";
+}
+
+.qicon-html5:before {
+  content: "";
+}
+
+.qicon-css3:before {
+  content: "";
+}
+
+.qicon-anchor:before {
+  content: "";
+}
+
+.qicon-unlock-alt:before {
+  content: "";
+}
+
+.qicon-bullseye:before {
+  content: "";
+}
+
+.qicon-ellipsis-h:before {
+  content: "";
+}
+
+.qicon-ellipsis-v:before {
+  content: "";
+}
+
+.qicon-rss-square:before {
+  content: "";
+}
+
+.qicon-play-circle:before {
+  content: "";
+}
+
+.qicon-ticket:before {
+  content: "";
+}
+
+.qicon-minus-square:before {
+  content: "";
+}
+
+.qicon-minus-square-o:before {
+  content: "";
+}
+
+.qicon-level-up:before {
+  content: "";
+}
+
+.qicon-level-down:before {
+  content: "";
+}
+
+.qicon-check-square:before {
+  content: "";
+}
+
+.qicon-pencil-square:before {
+  content: "";
+}
+
+.qicon-external-link-square:before {
+  content: "";
+}
+
+.qicon-share-square:before {
+  content: "";
+}
+
+.qicon-compass:before {
+  content: "";
+}
+
+.qicon-toggle-down:before,
+.qicon-caret-square-o-down:before {
+  content: "";
+}
+
+.qicon-toggle-up:before,
+.qicon-caret-square-o-up:before {
+  content: "";
+}
+
+.qicon-toggle-right:before,
+.qicon-caret-square-o-right:before {
+  content: "";
+}
+
+.qicon-euro:before,
+.qicon-eur:before {
+  content: "";
+}
+
+.qicon-gbp:before {
+  content: "";
+}
+
+.qicon-dollar:before,
+.qicon-usd:before {
+  content: "";
+}
+
+.qicon-rupee:before,
+.qicon-inr:before {
+  content: "";
+}
+
+.qicon-cny:before,
+.qicon-rmb:before,
+.qicon-yen:before,
+.qicon-jpy:before {
+  content: "";
+}
+
+.qicon-ruble:before,
+.qicon-rouble:before,
+.qicon-rub:before {
+  content: "";
+}
+
+.qicon-won:before,
+.qicon-krw:before {
+  content: "";
+}
+
+.qicon-bitcoin:before,
+.qicon-btc:before {
+  content: "";
+}
+
+.qicon-file:before {
+  content: "";
+}
+
+.qicon-file-text:before {
+  content: "";
+}
+
+.qicon-sort-alpha-asc:before {
+  content: "";
+}
+
+.qicon-sort-alpha-desc:before {
+  content: "";
+}
+
+.qicon-sort-amount-asc:before {
+  content: "";
+}
+
+.qicon-sort-amount-desc:before {
+  content: "";
+}
+
+.qicon-sort-numeric-asc:before {
+  content: "";
+}
+
+.qicon-sort-numeric-desc:before {
+  content: "";
+}
+
+.qicon-thumbs-up:before {
+  content: "";
+}
+
+.qicon-thumbs-down:before {
+  content: "";
+}
+
+.qicon-youtube-square:before {
+  content: "";
+}
+
+.qicon-youtube:before {
+  content: "";
+}
+
+.qicon-xing:before {
+  content: "";
+}
+
+.qicon-xing-square:before {
+  content: "";
+}
+
+.qicon-youtube-play:before {
+  content: "";
+}
+
+.qicon-dropbox:before {
+  content: "";
+}
+
+.qicon-stack-overflow:before {
+  content: "";
+}
+
+.qicon-instagram:before {
+  content: "";
+}
+
+.qicon-flickr:before {
+  content: "";
+}
+
+.qicon-adn:before {
+  content: "";
+}
+
+.qicon-bitbucket:before {
+  content: "";
+}
+
+.qicon-bitbucket-square:before {
+  content: "";
+}
+
+.qicon-tumblr:before {
+  content: "";
+}
+
+.qicon-tumblr-square:before {
+  content: "";
+}
+
+.qicon-long-arrow-down:before {
+  content: "";
+}
+
+.qicon-long-arrow-up:before {
+  content: "";
+}
+
+.qicon-long-arrow-left:before {
+  content: "";
+}
+
+.qicon-long-arrow-right:before {
+  content: "";
+}
+
+.qicon-apple:before {
+  content: "";
+}
+
+.qicon-windows:before {
+  content: "";
+}
+
+.qicon-android:before {
+  content: "";
+}
+
+.qicon-linux:before {
+  content: "";
+}
+
+.qicon-dribbble:before {
+  content: "";
+}
+
+.qicon-skype:before {
+  content: "";
+}
+
+.qicon-foursquare:before {
+  content: "";
+}
+
+.qicon-trello:before {
+  content: "";
+}
+
+.qicon-female:before {
+  content: "";
+}
+
+.qicon-male:before {
+  content: "";
+}
+
+.qicon-gittip:before,
+.qicon-gratipay:before {
+  content: "";
+}
+
+.qicon-sun-o:before {
+  content: "";
+}
+
+.qicon-moon-o:before {
+  content: "";
+}
+
+.qicon-archive:before {
+  content: "";
+}
+
+.qicon-bug:before {
+  content: "";
+}
+
+.qicon-vk:before {
+  content: "";
+}
+
+.qicon-weibo:before {
+  content: "";
+}
+
+.qicon-renren:before {
+  content: "";
+}
+
+.qicon-pagelines:before {
+  content: "";
+}
+
+.qicon-stack-exchange:before {
+  content: "";
+}
+
+.qicon-arrow-circle-o-right:before {
+  content: "";
+}
+
+.qicon-arrow-circle-o-left:before {
+  content: "";
+}
+
+.qicon-toggle-left:before,
+.qicon-caret-square-o-left:before {
+  content: "";
+}
+
+.qicon-dot-circle-o:before {
+  content: "";
+}
+
+.qicon-wheelchair:before {
+  content: "";
+}
+
+.qicon-vimeo-square:before {
+  content: "";
+}
+
+.qicon-turkish-lira:before,
+.qicon-try:before {
+  content: "";
+}
+
+.qicon-plus-square-o:before {
+  content: "";
+}
+
+.qicon-space-shuttle:before {
+  content: "";
+}
+
+.qicon-slack:before {
+  content: "";
+}
+
+.qicon-envelope-square:before {
+  content: "";
+}
+
+.qicon-wordpress:before {
+  content: "";
+}
+
+.qicon-openid:before {
+  content: "";
+}
+
+.qicon-institution:before,
+.qicon-bank:before,
+.qicon-university:before {
+  content: "";
+}
+
+.qicon-mortar-board:before,
+.qicon-graduation-cap:before {
+  content: "";
+}
+
+.qicon-yahoo:before {
+  content: "";
+}
+
+.qicon-google:before {
+  content: "";
+}
+
+.qicon-reddit:before {
+  content: "";
+}
+
+.qicon-reddit-square:before {
+  content: "";
+}
+
+.qicon-stumbleupon-circle:before {
+  content: "";
+}
+
+.qicon-stumbleupon:before {
+  content: "";
+}
+
+.qicon-delicious:before {
+  content: "";
+}
+
+.qicon-digg:before {
+  content: "";
+}
+
+.qicon-pied-piper-pp:before {
+  content: "";
+}
+
+.qicon-pied-piper-alt:before {
+  content: "";
+}
+
+.qicon-drupal:before {
+  content: "";
+}
+
+.qicon-joomla:before {
+  content: "";
+}
+
+.qicon-language:before {
+  content: "";
+}
+
+.qicon-fax:before {
+  content: "";
+}
+
+.qicon-building:before {
+  content: "";
+}
+
+.qicon-child:before {
+  content: "";
+}
+
+.qicon-paw:before {
+  content: "";
+}
+
+.qicon-spoon:before {
+  content: "";
+}
+
+.qicon-cube:before {
+  content: "";
+}
+
+.qicon-cubes:before {
+  content: "";
+}
+
+.qicon-behance:before {
+  content: "";
+}
+
+.qicon-behance-square:before {
+  content: "";
+}
+
+.qicon-steam:before {
+  content: "";
+}
+
+.qicon-steam-square:before {
+  content: "";
+}
+
+.qicon-recycle:before {
+  content: "";
+}
+
+.qicon-automobile:before,
+.qicon-car:before {
+  content: "";
+}
+
+.qicon-cab:before,
+.qicon-taxi:before {
+  content: "";
+}
+
+.qicon-tree:before {
+  content: "";
+}
+
+.qicon-spotify:before {
+  content: "";
+}
+
+.qicon-deviantart:before {
+  content: "";
+}
+
+.qicon-soundcloud:before {
+  content: "";
+}
+
+.qicon-database:before {
+  content: "";
+}
+
+.qicon-file-pdf-o:before {
+  content: "";
+}
+
+.qicon-file-word-o:before {
+  content: "";
+}
+
+.qicon-file-excel-o:before {
+  content: "";
+}
+
+.qicon-file-powerpoint-o:before {
+  content: "";
+}
+
+.qicon-file-photo-o:before,
+.qicon-file-picture-o:before,
+.qicon-file-image-o:before {
+  content: "";
+}
+
+.qicon-file-zip-o:before,
+.qicon-file-archive-o:before {
+  content: "";
+}
+
+.qicon-file-sound-o:before,
+.qicon-file-audio-o:before {
+  content: "";
+}
+
+.qicon-file-movie-o:before,
+.qicon-file-video-o:before {
+  content: "";
+}
+
+.qicon-file-code-o:before {
+  content: "";
+}
+
+.qicon-vine:before {
+  content: "";
+}
+
+.qicon-codepen:before {
+  content: "";
+}
+
+.qicon-jsfiddle:before {
+  content: "";
+}
+
+.qicon-life-bouy:before,
+.qicon-life-buoy:before,
+.qicon-life-saver:before,
+.qicon-support:before,
+.qicon-life-ring:before {
+  content: "";
+}
+
+.qicon-circle-o-notch:before {
+  content: "";
+}
+
+.qicon-ra:before,
+.qicon-resistance:before,
+.qicon-rebel:before {
+  content: "";
+}
+
+.qicon-ge:before,
+.qicon-empire:before {
+  content: "";
+}
+
+.qicon-git-square:before {
+  content: "";
+}
+
+.qicon-git:before {
+  content: "";
+}
+
+.qicon-y-combinator-square:before,
+.qicon-yc-square:before,
+.qicon-hacker-news:before {
+  content: "";
+}
+
+.qicon-tencent-weibo:before {
+  content: "";
+}
+
+.qicon-qq:before {
+  content: "";
+}
+
+.qicon-wechat:before,
+.qicon-weixin:before {
+  content: "";
+}
+
+.qicon-send:before,
+.qicon-paper-plane:before {
+  content: "";
+}
+
+.qicon-send-o:before,
+.qicon-paper-plane-o:before {
+  content: "";
+}
+
+.qicon-history:before {
+  content: "";
+}
+
+.qicon-circle-thin:before {
+  content: "";
+}
+
+.qicon-header:before {
+  content: "";
+}
+
+.qicon-paragraph:before {
+  content: "";
+}
+
+.qicon-sliders:before {
+  content: "";
+}
+
+.qicon-share-alt:before {
+  content: "";
+}
+
+.qicon-share-alt-square:before {
+  content: "";
+}
+
+.qicon-bomb:before {
+  content: "";
+}
+
+.qicon-soccer-ball-o:before,
+.qicon-futbol-o:before {
+  content: "";
+}
+
+.qicon-tty:before {
+  content: "";
+}
+
+.qicon-binoculars:before {
+  content: "";
+}
+
+.qicon-plug:before {
+  content: "";
+}
+
+.qicon-slideshare:before {
+  content: "";
+}
+
+.qicon-twitch:before {
+  content: "";
+}
+
+.qicon-yelp:before {
+  content: "";
+}
+
+.qicon-newspaper-o:before {
+  content: "";
+}
+
+.qicon-wifi:before {
+  content: "";
+}
+
+.qicon-calculator:before {
+  content: "";
+}
+
+.qicon-paypal:before {
+  content: "";
+}
+
+.qicon-google-wallet:before {
+  content: "";
+}
+
+.qicon-cc-visa:before {
+  content: "";
+}
+
+.qicon-cc-mastercard:before {
+  content: "";
+}
+
+.qicon-cc-discover:before {
+  content: "";
+}
+
+.qicon-cc-amex:before {
+  content: "";
+}
+
+.qicon-cc-paypal:before {
+  content: "";
+}
+
+.qicon-cc-stripe:before {
+  content: "";
+}
+
+.qicon-bell-slash:before {
+  content: "";
+}
+
+.qicon-bell-slash-o:before {
+  content: "";
+}
+
+.qicon-trash:before {
+  content: "";
+}
+
+.qicon-copyright:before {
+  content: "";
+}
+
+.qicon-at:before {
+  content: "";
+}
+
+.qicon-eyedropper:before {
+  content: "";
+}
+
+.qicon-paint-brush:before {
+  content: "";
+}
+
+.qicon-birthday-cake:before {
+  content: "";
+}
+
+.qicon-area-chart:before {
+  content: "";
+}
+
+.qicon-pie-chart:before {
+  content: "";
+}
+
+.qicon-line-chart:before {
+  content: "";
+}
+
+.qicon-lastfm:before {
+  content: "";
+}
+
+.qicon-lastfm-square:before {
+  content: "";
+}
+
+.qicon-toggle-off:before {
+  content: "";
+}
+
+.qicon-toggle-on:before {
+  content: "";
+}
+
+.qicon-bicycle:before {
+  content: "";
+}
+
+.qicon-bus:before {
+  content: "";
+}
+
+.qicon-ioxhost:before {
+  content: "";
+}
+
+.qicon-angellist:before {
+  content: "";
+}
+
+.qicon-cc:before {
+  content: "";
+}
+
+.qicon-shekel:before,
+.qicon-sheqel:before,
+.qicon-ils:before {
+  content: "";
+}
+
+.qicon-meanpath:before {
+  content: "";
+}
+
+.qicon-buysellads:before {
+  content: "";
+}
+
+.qicon-connectdevelop:before {
+  content: "";
+}
+
+.qicon-dashcube:before {
+  content: "";
+}
+
+.qicon-forumbee:before {
+  content: "";
+}
+
+.qicon-leanpub:before {
+  content: "";
+}
+
+.qicon-sellsy:before {
+  content: "";
+}
+
+.qicon-shirtsinbulk:before {
+  content: "";
+}
+
+.qicon-simplybuilt:before {
+  content: "";
+}
+
+.qicon-skyatlas:before {
+  content: "";
+}
+
+.qicon-cart-plus:before {
+  content: "";
+}
+
+.qicon-cart-arrow-down:before {
+  content: "";
+}
+
+.qicon-diamond:before {
+  content: "";
+}
+
+.qicon-ship:before {
+  content: "";
+}
+
+.qicon-user-secret:before {
+  content: "";
+}
+
+.qicon-motorcycle:before {
+  content: "";
+}
+
+.qicon-street-view:before {
+  content: "";
+}
+
+.qicon-heartbeat:before {
+  content: "";
+}
+
+.qicon-venus:before {
+  content: "";
+}
+
+.qicon-mars:before {
+  content: "";
+}
+
+.qicon-mercury:before {
+  content: "";
+}
+
+.qicon-intersex:before,
+.qicon-transgender:before {
+  content: "";
+}
+
+.qicon-transgender-alt:before {
+  content: "";
+}
+
+.qicon-venus-double:before {
+  content: "";
+}
+
+.qicon-mars-double:before {
+  content: "";
+}
+
+.qicon-venus-mars:before {
+  content: "";
+}
+
+.qicon-mars-stroke:before {
+  content: "";
+}
+
+.qicon-mars-stroke-v:before {
+  content: "";
+}
+
+.qicon-mars-stroke-h:before {
+  content: "";
+}
+
+.qicon-neuter:before {
+  content: "";
+}
+
+.qicon-genderless:before {
+  content: "";
+}
+
+.qicon-facebook-official:before {
+  content: "";
+}
+
+.qicon-pinterest-p:before {
+  content: "";
+}
+
+.qicon-whatsapp:before {
+  content: "";
+}
+
+.qicon-server:before {
+  content: "";
+}
+
+.qicon-user-plus:before {
+  content: "";
+}
+
+.qicon-user-times:before {
+  content: "";
+}
+
+.qicon-hotel:before,
+.qicon-bed:before {
+  content: "";
+}
+
+.qicon-viacoin:before {
+  content: "";
+}
+
+.qicon-train:before {
+  content: "";
+}
+
+.qicon-subway:before {
+  content: "";
+}
+
+.qicon-medium:before {
+  content: "";
+}
+
+.qicon-yc:before,
+.qicon-y-combinator:before {
+  content: "";
+}
+
+.qicon-optin-monster:before {
+  content: "";
+}
+
+.qicon-opencart:before {
+  content: "";
+}
+
+.qicon-expeditedssl:before {
+  content: "";
+}
+
+.qicon-battery-4:before,
+.qicon-battery:before,
+.qicon-battery-full:before {
+  content: "";
+}
+
+.qicon-battery-3:before,
+.qicon-battery-three-quarters:before {
+  content: "";
+}
+
+.qicon-battery-2:before,
+.qicon-battery-half:before {
+  content: "";
+}
+
+.qicon-battery-1:before,
+.qicon-battery-quarter:before {
+  content: "";
+}
+
+.qicon-battery-0:before,
+.qicon-battery-empty:before {
+  content: "";
+}
+
+.qicon-mouse-pointer:before {
+  content: "";
+}
+
+.qicon-i-cursor:before {
+  content: "";
+}
+
+.qicon-object-group:before {
+  content: "";
+}
+
+.qicon-object-ungroup:before {
+  content: "";
+}
+
+.qicon-sticky-note:before {
+  content: "";
+}
+
+.qicon-sticky-note-o:before {
+  content: "";
+}
+
+.qicon-cc-jcb:before {
+  content: "";
+}
+
+.qicon-cc-diners-club:before {
+  content: "";
+}
+
+.qicon-clone:before {
+  content: "";
+}
+
+.qicon-balance-scale:before {
+  content: "";
+}
+
+.qicon-hourglass-o:before {
+  content: "";
+}
+
+.qicon-hourglass-1:before,
+.qicon-hourglass-start:before {
+  content: "";
+}
+
+.qicon-hourglass-2:before,
+.qicon-hourglass-half:before {
+  content: "";
+}
+
+.qicon-hourglass-3:before,
+.qicon-hourglass-end:before {
+  content: "";
+}
+
+.qicon-hourglass:before {
+  content: "";
+}
+
+.qicon-hand-grab-o:before,
+.qicon-hand-rock-o:before {
+  content: "";
+}
+
+.qicon-hand-stop-o:before,
+.qicon-hand-paper-o:before {
+  content: "";
+}
+
+.qicon-hand-scissors-o:before {
+  content: "";
+}
+
+.qicon-hand-lizard-o:before {
+  content: "";
+}
+
+.qicon-hand-spock-o:before {
+  content: "";
+}
+
+.qicon-hand-pointer-o:before {
+  content: "";
+}
+
+.qicon-hand-peace-o:before {
+  content: "";
+}
+
+.qicon-trademark:before {
+  content: "";
+}
+
+.qicon-registered:before {
+  content: "";
+}
+
+.qicon-creative-commons:before {
+  content: "";
+}
+
+.qicon-gg:before {
+  content: "";
+}
+
+.qicon-gg-circle:before {
+  content: "";
+}
+
+.qicon-tripadvisor:before {
+  content: "";
+}
+
+.qicon-odnoklassniki:before {
+  content: "";
+}
+
+.qicon-odnoklassniki-square:before {
+  content: "";
+}
+
+.qicon-get-pocket:before {
+  content: "";
+}
+
+.qicon-wikipedia-w:before {
+  content: "";
+}
+
+.qicon-safari:before {
+  content: "";
+}
+
+.qicon-chrome:before {
+  content: "";
+}
+
+.qicon-firefox:before {
+  content: "";
+}
+
+.qicon-opera:before {
+  content: "";
+}
+
+.qicon-internet-explorer:before {
+  content: "";
+}
+
+.qicon-tv:before,
+.qicon-television:before {
+  content: "";
+}
+
+.qicon-contao:before {
+  content: "";
+}
+
+.qicon-500px:before {
+  content: "";
+}
+
+.qicon-amazon:before {
+  content: "";
+}
+
+.qicon-calendar-plus-o:before {
+  content: "";
+}
+
+.qicon-calendar-minus-o:before {
+  content: "";
+}
+
+.qicon-calendar-times-o:before {
+  content: "";
+}
+
+.qicon-calendar-check-o:before {
+  content: "";
+}
+
+.qicon-industry:before {
+  content: "";
+}
+
+.qicon-map-pin:before {
+  content: "";
+}
+
+.qicon-map-signs:before {
+  content: "";
+}
+
+.qicon-map-o:before {
+  content: "";
+}
+
+.qicon-map:before {
+  content: "";
+}
+
+.qicon-commenting:before {
+  content: "";
+}
+
+.qicon-commenting-o:before {
+  content: "";
+}
+
+.qicon-houzz:before {
+  content: "";
+}
+
+.qicon-vimeo:before {
+  content: "";
+}
+
+.qicon-black-tie:before {
+  content: "";
+}
+
+.qicon-fonticons:before {
+  content: "";
+}
+
+.qicon-reddit-alien:before {
+  content: "";
+}
+
+.qicon-edge:before {
+  content: "";
+}
+
+.qicon-credit-card-alt:before {
+  content: "";
+}
+
+.qicon-codiepie:before {
+  content: "";
+}
+
+.qicon-modx:before {
+  content: "";
+}
+
+.qicon-fort-awesome:before {
+  content: "";
+}
+
+.qicon-usb:before {
+  content: "";
+}
+
+.qicon-product-hunt:before {
+  content: "";
+}
+
+.qicon-mixcloud:before {
+  content: "";
+}
+
+.qicon-scribd:before {
+  content: "";
+}
+
+.qicon-pause-circle:before {
+  content: "";
+}
+
+.qicon-pause-circle-o:before {
+  content: "";
+}
+
+.qicon-stop-circle:before {
+  content: "";
+}
+
+.qicon-stop-circle-o:before {
+  content: "";
+}
+
+.qicon-shopping-bag:before {
+  content: "";
+}
+
+.qicon-shopping-basket:before {
+  content: "";
+}
+
+.qicon-hashtag:before {
+  content: "";
+}
+
+.qicon-bluetooth:before {
+  content: "";
+}
+
+.qicon-bluetooth-b:before {
+  content: "";
+}
+
+.qicon-percent:before {
+  content: "";
+}
+
+.qicon-gitlab:before {
+  content: "";
+}
+
+.qicon-wpbeginner:before {
+  content: "";
+}
+
+.qicon-wpforms:before {
+  content: "";
+}
+
+.qicon-envira:before {
+  content: "";
+}
+
+.qicon-universal-access:before {
+  content: "";
+}
+
+.qicon-wheelchair-alt:before {
+  content: "";
+}
+
+.qicon-question-circle-o:before {
+  content: "";
+}
+
+.qicon-blind:before {
+  content: "";
+}
+
+.qicon-audio-description:before {
+  content: "";
+}
+
+.qicon-volume-control-phone:before {
+  content: "";
+}
+
+.qicon-braille:before {
+  content: "";
+}
+
+.qicon-assistive-listening-systems:before {
+  content: "";
+}
+
+.qicon-asl-interpreting:before,
+.qicon-american-sign-language-interpreting:before {
+  content: "";
+}
+
+.qicon-deafness:before,
+.qicon-hard-of-hearing:before,
+.qicon-deaf:before {
+  content: "";
+}
+
+.qicon-glide:before {
+  content: "";
+}
+
+.qicon-glide-g:before {
+  content: "";
+}
+
+.qicon-signing:before,
+.qicon-sign-language:before {
+  content: "";
+}
+
+.qicon-low-vision:before {
+  content: "";
+}
+
+.qicon-viadeo:before {
+  content: "";
+}
+
+.qicon-viadeo-square:before {
+  content: "";
+}
+
+.qicon-snapchat:before {
+  content: "";
+}
+
+.qicon-snapchat-ghost:before {
+  content: "";
+}
+
+.qicon-snapchat-square:before {
+  content: "";
+}
+
+.qicon-pied-piper:before {
+  content: "";
+}
+
+.qicon-first-order:before {
+  content: "";
+}
+
+.qicon-yoast:before {
+  content: "";
+}
+
+.qicon-themeisle:before {
+  content: "";
+}
+
+.qicon-google-plus-circle:before,
+.qicon-google-plus-official:before {
+  content: "";
+}
+
+.qicon-fa:before,
+.qicon-font-awesome:before {
+  content: "";
+}
+
+.qicon-handshake-o:before {
+  content: "";
+}
+
+.qicon-envelope-open:before {
+  content: "";
+}
+
+.qicon-envelope-open-o:before {
+  content: "";
+}
+
+.qicon-linode:before {
+  content: "";
+}
+
+.qicon-address-book:before {
+  content: "";
+}
+
+.qicon-address-book-o:before {
+  content: "";
+}
+
+.qicon-vcard:before,
+.qicon-address-card:before {
+  content: "";
+}
+
+.qicon-vcard-o:before,
+.qicon-address-card-o:before {
+  content: "";
+}
+
+.qicon-user-circle:before {
+  content: "";
+}
+
+.qicon-user-circle-o:before {
+  content: "";
+}
+
+.qicon-user-o:before {
+  content: "";
+}
+
+.qicon-id-badge:before {
+  content: "";
+}
+
+.qicon-drivers-license:before,
+.qicon-id-card:before {
+  content: "";
+}
+
+.qicon-drivers-license-o:before,
+.qicon-id-card-o:before {
+  content: "";
+}
+
+.qicon-quora:before {
+  content: "";
+}
+
+.qicon-free-code-camp:before {
+  content: "";
+}
+
+.qicon-telegram:before {
+  content: "";
+}
+
+.qicon-thermometer-4:before,
+.qicon-thermometer:before,
+.qicon-thermometer-full:before {
+  content: "";
+}
+
+.qicon-thermometer-3:before,
+.qicon-thermometer-three-quarters:before {
+  content: "";
+}
+
+.qicon-thermometer-2:before,
+.qicon-thermometer-half:before {
+  content: "";
+}
+
+.qicon-thermometer-1:before,
+.qicon-thermometer-quarter:before {
+  content: "";
+}
+
+.qicon-thermometer-0:before,
+.qicon-thermometer-empty:before {
+  content: "";
+}
+
+.qicon-shower:before {
+  content: "";
+}
+
+.qicon-bathtub:before,
+.qicon-s15:before,
+.qicon-bath:before {
+  content: "";
+}
+
+.qicon-podcast:before {
+  content: "";
+}
+
+.qicon-window-maximize:before {
+  content: "";
+}
+
+.qicon-window-minimize:before {
+  content: "";
+}
+
+.qicon-window-restore:before {
+  content: "";
+}
+
+.qicon-times-rectangle:before,
+.qicon-window-close:before {
+  content: "";
+}
+
+.qicon-times-rectangle-o:before,
+.qicon-window-close-o:before {
+  content: "";
+}
+
+.qicon-bandcamp:before {
+  content: "";
+}
+
+.qicon-grav:before {
+  content: "";
+}
+
+.qicon-etsy:before {
+  content: "";
+}
+
+.qicon-imdb:before {
+  content: "";
+}
+
+.qicon-ravelry:before {
+  content: "";
+}
+
+.qicon-eercast:before {
+  content: "";
+}
+
+.qicon-microchip:before {
+  content: "";
+}
+
+.qicon-snowflake-o:before {
+  content: "";
+}
+
+.qicon-superpowers:before {
+  content: "";
+}
+
+.qicon-wpexplorer:before {
+  content: "";
+}
+
+.qicon-meetup:before {
+  content: "";
+}
+
+:root {
+  --opacity-slide: 0.5;
+  --width-slider: 100%;
+  --height-slider: 500px;
+  --color-slider: #FFFFFF;
+  --height-responsive: 200px;
+  --tempo-display: block;
+  --controls-display: block;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section.slide {
+  float: left;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  text-align: center;
+  height: var(--height-slider);
+}
+@media only screen and (max-width: 766px) {
+  section.slide {
+    height: var(--height-responsive);
+  }
+}
+section.slide .slider-container {
+  float: left;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #FFFFFF;
+  width: var(--width-slider);
+}
+section.slide .slider-container .slider-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 90;
+  height: 100%;
+  position: relative;
+}
+section.slide .slider-container .slider-wrapper li {
+  display: none;
+}
+section.slide .slider-container .slider-wrapper li.slide-current {
+  display: block;
+}
+section.slide .slider-container .slider-wrapper li.video {
+  height: 100%;
+  position: relative;
+  background: #000000;
+}
+section.slide .slider-container .slider-wrapper li.video .include {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: absolute;
+}
+section.slide .slider-container .slider-wrapper li.video .include iframe, section.slide .slider-container .slider-wrapper li.video .include object, section.slide .slider-container .slider-wrapper li.video .include embed, section.slide .slider-container .slider-wrapper li.video .include video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+section.slide .slider-container .slider-wrapper li img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+section.slide .slider-container .slider-wrapper li .capa {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 92;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+}
+section.slide .slider-container .drt-control {
+  top: 40%;
+  z-index: 90;
+  color: white;
+  padding: 30px;
+  cursor: pointer;
+  font-size: 22px;
+  position: absolute;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  background: rgba(0, 0, 0, var(--opacity-slide));
+}
+@media only screen and (max-width: 766px) {
+  section.slide .slider-container .drt-control {
+    padding: 20px;
+    font-size: 20px;
+  }
+}
+section.slide .slider-container .drt-control:hover {
+  background: black;
+}
+section.slide .slider-container .drt-control.control-left {
+  left: -20px;
+  border-radius: 0px 50px 50px 0px;
+}
+section.slide .slider-container .drt-control.control-right {
+  right: -20px;
+  border-radius: 50px 0 0 50px;
+}
+section.slide .slider-container .slider-controls {
+  z-index: 90;
+  width: 100%;
+  bottom: 0px;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 0px;
+  position: absolute;
+  padding-bottom: 15px;
+  display: var(--controls-display);
+  background: rgba(0, 0, 0, var(--opacity-slide));
+  -webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 766px) {
+  section.slide .slider-container .slider-controls {
+    display: none;
+  }
+}
+section.slide .slider-container .slider-controls li {
+  zoom: 1;
+  width: 25px;
+  height: 8px;
+  margin: 0 6px;
+  cursor: pointer;
+  *display: inline;
+  background: #DA4453;
+  text-indent: -9999px;
+  display: inline-block;
+  background: rgba(59, 59, 59, 0.5);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+@media only screen and (max-width: 766px) {
+  section.slide .slider-container .slider-controls li {
+    width: calc(calc(100% / 4) - 40px);
+  }
+}
+section.slide .slider-container .slider-controls li.active {
+  background: var(--color-slider);
+}
+section.slide .slider-container .tempo-bar {
+  width: 0%;
+  bottom: 0px;
+  height: 5px;
+  z-index: 91;
+  float: left;
+  position: absolute;
+  display: var(--tempo-display);
+  background: var(--color-slider);
+}
+
+@font-face {
+  font-family: "CenturyGothic";
+  src: url(../fonts/CenturyGothic.ttf) format("truetype");
+}
+body {
+  background: var(--bg-page);
+  font-family: CenturyGothic, "sans-serif";
+}
+
+.hidden {
+  display: none;
+  visibility: none;
+}
+
+header {
+  float: left;
+  width: 100%;
+  display: block;
+}
+header ul {
+  margin: 0;
+  padding: 0;
+  float: left;
+  list-style: none;
+}
+header .users {
+  margin: 0;
+  padding: 0;
+  float: left;
+  width: 100%;
+  display: block;
+  font-size: 17px;
+  background: var(--bg-bar);
+}
+header .users ul.social li {
+  float: left;
+  color: #000000;
+  padding: 5px 10px;
+  display: inline-block;
+}
+@media only screen and (max-width: 766px) {
+  header .users ul.social li {
+    padding: 5px;
+  }
+}
+header .users ul.social li a {
+  color: inherit;
+}
+header .users ul.login {
+  float: right;
+  color: #000000;
+}
+header .users ul.login li {
+  float: left;
+  margin-left: 5px;
+  background: #CCCCCC;
+  display: inline-block;
+}
+header .users ul.login a {
+  padding: 5px;
+}
+header .users ul.login a i {
+  margin-right: 5px;
+}
+header .login a {
+  float: right;
+  padding: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+header .logos .logo {
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: var(--height-bar);
+}
+header .logos .logo img {
+  padding: 10px;
+  max-width: 100%;
+  max-height: calc( var(--height-bar) - 15px);
+}
+header nav {
+  width: 100%;
+  float: left;
+  height: 40px;
+  display: block;
+  color: #000000;
+  background: var(--bg-bar);
+  -webkit-box-shadow: 0px 3px 3px 0px #FFFFFF;
+          box-shadow: 0px 3px 3px 0px #FFFFFF;
+}
+header nav a.nav_collapse {
+  display: none;
+}
+header nav ul {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+header nav ul li {
+  position: relative;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  display: inline-block;
+  border-right: 1px solid #CCCCCC;
+}
+@media only screen and (max-width: 766px) {
+  header nav ul li {
+    display: block;
+  }
+}
+header nav ul li:hover {
+  background: #CCCCCC;
+}
+header nav ul li:last-child {
+  border-right: none;
+}
+header nav ul li > ul {
+  opacity: 0;
+  z-index: 99;
+  height: auto;
+  display: block;
+  position: absolute;
+  background: #FFFFFF;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+header nav ul li > ul li {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid #CCCCCC;
+}
+header nav ul li:hover > ul {
+  opacity: 1;
+}
+header nav ul li a {
+  padding: 10px;
+  display: block;
+  color: inherit;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 766px) {
+  header nav ul li a {
+    padding: 5px;
+  }
+}
+@media only screen and (max-width: 766px) {
+  header .qcont {
+    width: 100%;
+    float: left;
+  }
+  header .logos {
+    width: 100%;
+    float: left;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[6];
+    grid-template-columns: repeat(6, 1fr);
+  }
+  header .logos .left {
+    -ms-grid-column-span: 2;
+    grid-column: span 2;
+  }
+  header .logos .right {
+    -ms-grid-column-span: 4;
+    grid-column: span 4;
+  }
+  header nav {
+    float: left;
+    height: auto;
+    display: block;
+  }
+  header nav a.nav_collapse {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #000000;
+    font-size: 40px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header nav ul {
+    width: 100%;
+    float: left;
+    height: auto;
+    z-index: 9999;
+    display: none;
+    text-align: center;
+    position: absolute;
+    background: #FFFFFF;
+  }
+  header nav ul li {
+    float: left;
+    width: 100%;
+    display: block;
+    border-top: 1px solid #CCCCCC;
+  }
+  header nav ul li > ul {
+    opacity: 1;
+    display: block;
+    position: relative;
+  }
+  header nav ul li > ul li:hover {
+    background: none;
+  }
+  header nav ul li a {
+    padding: 10px;
+  }
+}
+
+.br {
+  width: 100%;
+  float: left;
+  height: 1.2px;
+  display: block;
+  margin: 10px auto;
+  background: #CCCCCC;
+}
+
+main {
+  width: 100%;
+  float: left;
+  padding: 20px;
+  display: block;
+  position: relative;
+}
+@media only screen and (max-width: 766px) {
+  main {
+    padding: 5px;
+  }
+}
+main.home-page {
+  padding: 0;
+  background-image: url("../img/bg/bg-home.jpg");
+  background-position: center top;
+  background-attachment: cover;
+}
+main.home-page:before {
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: -webkit-gradient(linear, left top, right top, color-stop(100%, rgba(54, 53, 56, 0.7)), color-stop(80%, transparent));
+  background: -o-linear-gradient(left, rgba(54, 53, 56, 0.7) 100%, transparent 80%);
+  background: linear-gradient(to right, rgba(54, 53, 56, 0.7) 100%, transparent 80%);
+}
+main .qcont {
+  position: relative;
+}
+@media only screen and (max-width: 766px) {
+  main .qcont {
+    width: 100%;
+  }
+}
+main .qcont section.description,
+main .qcont section.form-login,
+main .qcont section.page-user,
+main .qcont section.locate {
+  z-index: 2;
+  width: 100%;
+  float: left;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  background: #FFFFFF;
+}
+@media only screen and (max-width: 766px) {
+  main .qcont section.description,
+main .qcont section.form-login,
+main .qcont section.page-user,
+main .qcont section.locate {
+    width: 100%;
+  }
+}
+main .qcont section.description .content-columms,
+main .qcont section.form-login .content-columms,
+main .qcont section.page-user .content-columms,
+main .qcont section.locate .content-columms {
+  z-index: 2;
+  float: left;
+  padding: 5px;
+  position: relative;
+  display: inline-block;
+}
+main .qcont section.description .content-columms.x1,
+main .qcont section.form-login .content-columms.x1,
+main .qcont section.page-user .content-columms.x1,
+main .qcont section.locate .content-columms.x1 {
+  width: calc(60% - 10px);
+}
+main .qcont section.description .content-columms.x2,
+main .qcont section.form-login .content-columms.x2,
+main .qcont section.page-user .content-columms.x2,
+main .qcont section.locate .content-columms.x2 {
+  width: calc(40% - 10px);
+}
+main .qcont section.description .content-columms img,
+main .qcont section.form-login .content-columms img,
+main .qcont section.page-user .content-columms img,
+main .qcont section.locate .content-columms img {
+  width: 100%;
+  border-radius: 4px;
+  -webkit-box-shadow: 3px 3px 3px #CCC;
+          box-shadow: 3px 3px 3px #CCC;
+}
+main .qcont section.description p,
+main .qcont section.form-login p,
+main .qcont section.page-user p,
+main .qcont section.locate p {
+  margin: 0;
+  padding: 0;
+}
+main .qcont section.description h1.title,
+main .qcont section.form-login h1.title,
+main .qcont section.page-user h1.title,
+main .qcont section.locate h1.title {
+  z-index: 2;
+  padding: 10px;
+  font-size: 24px;
+  text-align: left;
+  line-height: 1.25;
+  position: relative;
+  margin: 0 auto 25px;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #aaaaaa;
+}
+main .qcont section.description h1.title span.date,
+main .qcont section.form-login h1.title span.date,
+main .qcont section.page-user h1.title span.date,
+main .qcont section.locate h1.title span.date {
+  float: right;
+}
+main .qcont section.description.description, main .qcont section.description.form-login,
+main .qcont section.form-login.description,
+main .qcont section.form-login.form-login,
+main .qcont section.page-user.description,
+main .qcont section.page-user.form-login,
+main .qcont section.locate.description,
+main .qcont section.locate.form-login {
+  background: url("../img/espacio.jpg") center;
+  background-size: cover;
+}
+main .qcont section.description.description:before, main .qcont section.description.form-login:before,
+main .qcont section.form-login.description:before,
+main .qcont section.form-login.form-login:before,
+main .qcont section.page-user.description:before,
+main .qcont section.page-user.form-login:before,
+main .qcont section.locate.description:before,
+main .qcont section.locate.form-login:before {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+}
+main .qcont section.description.description, main .qcont section.description.form-login, main .qcont section.description.page-user,
+main .qcont section.form-login.description,
+main .qcont section.form-login.form-login,
+main .qcont section.form-login.page-user,
+main .qcont section.page-user.description,
+main .qcont section.page-user.form-login,
+main .qcont section.page-user.page-user,
+main .qcont section.locate.description,
+main .qcont section.locate.form-login,
+main .qcont section.locate.page-user {
+  padding: 50px 60px;
+}
+@media only screen and (max-width: 766px) {
+  main .qcont section.description.description, main .qcont section.description.form-login, main .qcont section.description.page-user,
+main .qcont section.form-login.description,
+main .qcont section.form-login.form-login,
+main .qcont section.form-login.page-user,
+main .qcont section.page-user.description,
+main .qcont section.page-user.form-login,
+main .qcont section.page-user.page-user,
+main .qcont section.locate.description,
+main .qcont section.locate.form-login,
+main .qcont section.locate.page-user {
+    padding: 50px 10px;
+  }
+}
+main .qcont section.description.locate .mapouter,
+main .qcont section.form-login.locate .mapouter,
+main .qcont section.page-user.locate .mapouter,
+main .qcont section.locate.locate .mapouter {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+main .qcont section.description.locate .gmap_canvas,
+main .qcont section.form-login.locate .gmap_canvas,
+main .qcont section.page-user.locate .gmap_canvas,
+main .qcont section.locate.locate .gmap_canvas {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  background: none !important;
+}
+main .qcont section.description.form-login, main .qcont section.description.page-user,
+main .qcont section.form-login.form-login,
+main .qcont section.form-login.page-user,
+main .qcont section.page-user.form-login,
+main .qcont section.page-user.page-user,
+main .qcont section.locate.form-login,
+main .qcont section.locate.page-user {
+  text-align: left;
+}
+main .qcont section.description.form-login .form-content, main .qcont section.description.page-user .form-content,
+main .qcont section.form-login.form-login .form-content,
+main .qcont section.form-login.page-user .form-content,
+main .qcont section.page-user.form-login .form-content,
+main .qcont section.page-user.page-user .form-content,
+main .qcont section.locate.form-login .form-content,
+main .qcont section.locate.page-user .form-content {
+  width: 80%;
+  margin: 0 auto;
+}
+main .qcont section.description.form-login .form-content.pedidos, main .qcont section.description.page-user .form-content.pedidos,
+main .qcont section.form-login.form-login .form-content.pedidos,
+main .qcont section.form-login.page-user .form-content.pedidos,
+main .qcont section.page-user.form-login .form-content.pedidos,
+main .qcont section.page-user.page-user .form-content.pedidos,
+main .qcont section.locate.form-login .form-content.pedidos,
+main .qcont section.locate.page-user .form-content.pedidos {
+  width: 100%;
+}
+@media only screen and (max-width: 766px) {
+  main .qcont section.description.form-login .form-content, main .qcont section.description.page-user .form-content,
+main .qcont section.form-login.form-login .form-content,
+main .qcont section.form-login.page-user .form-content,
+main .qcont section.page-user.form-login .form-content,
+main .qcont section.page-user.page-user .form-content,
+main .qcont section.locate.form-login .form-content,
+main .qcont section.locate.page-user .form-content {
+    width: 100%;
+  }
+}
+main .qcont section.description.form-login .form-content .content-pedido, main .qcont section.description.page-user .form-content .content-pedido,
+main .qcont section.form-login.form-login .form-content .content-pedido,
+main .qcont section.form-login.page-user .form-content .content-pedido,
+main .qcont section.page-user.form-login .form-content .content-pedido,
+main .qcont section.page-user.page-user .form-content .content-pedido,
+main .qcont section.locate.form-login .form-content .content-pedido,
+main .qcont section.locate.page-user .form-content .content-pedido {
+  width: 100%;
+  float: left;
+  display: block;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px 5px 5px 5px;
+}
+main .qcont section.description.form-login .form-content .content-pedido table, main .qcont section.description.page-user .form-content .content-pedido table,
+main .qcont section.form-login.form-login .form-content .content-pedido table,
+main .qcont section.form-login.page-user .form-content .content-pedido table,
+main .qcont section.page-user.form-login .form-content .content-pedido table,
+main .qcont section.page-user.page-user .form-content .content-pedido table,
+main .qcont section.locate.form-login .form-content .content-pedido table,
+main .qcont section.locate.page-user .form-content .content-pedido table {
+  width: 100%;
+  border-collapse: collapse;
+}
+main .qcont section.description.form-login .form-content .content-pedido tr:nth-of-type(odd), main .qcont section.description.page-user .form-content .content-pedido tr:nth-of-type(odd),
+main .qcont section.form-login.form-login .form-content .content-pedido tr:nth-of-type(odd),
+main .qcont section.form-login.page-user .form-content .content-pedido tr:nth-of-type(odd),
+main .qcont section.page-user.form-login .form-content .content-pedido tr:nth-of-type(odd),
+main .qcont section.page-user.page-user .form-content .content-pedido tr:nth-of-type(odd),
+main .qcont section.locate.form-login .form-content .content-pedido tr:nth-of-type(odd),
+main .qcont section.locate.page-user .form-content .content-pedido tr:nth-of-type(odd) {
+  background: #eee;
+}
+main .qcont section.description.form-login .form-content .content-pedido th, main .qcont section.description.page-user .form-content .content-pedido th,
+main .qcont section.form-login.form-login .form-content .content-pedido th,
+main .qcont section.form-login.page-user .form-content .content-pedido th,
+main .qcont section.page-user.form-login .form-content .content-pedido th,
+main .qcont section.page-user.page-user .form-content .content-pedido th,
+main .qcont section.locate.form-login .form-content .content-pedido th,
+main .qcont section.locate.page-user .form-content .content-pedido th {
+  color: white;
+  background: #333;
+  font-weight: bold;
+}
+main .qcont section.description.form-login .form-content .content-pedido td, main .qcont section.description.form-login .form-content .content-pedido th, main .qcont section.description.page-user .form-content .content-pedido td, main .qcont section.description.page-user .form-content .content-pedido th,
+main .qcont section.form-login.form-login .form-content .content-pedido td,
+main .qcont section.form-login.form-login .form-content .content-pedido th,
+main .qcont section.form-login.page-user .form-content .content-pedido td,
+main .qcont section.form-login.page-user .form-content .content-pedido th,
+main .qcont section.page-user.form-login .form-content .content-pedido td,
+main .qcont section.page-user.form-login .form-content .content-pedido th,
+main .qcont section.page-user.page-user .form-content .content-pedido td,
+main .qcont section.page-user.page-user .form-content .content-pedido th,
+main .qcont section.locate.form-login .form-content .content-pedido td,
+main .qcont section.locate.form-login .form-content .content-pedido th,
+main .qcont section.locate.page-user .form-content .content-pedido td,
+main .qcont section.locate.page-user .form-content .content-pedido th {
+  padding: 6px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+main .qcont section.description.form-login a.forget, main .qcont section.description.page-user a.forget,
+main .qcont section.form-login.form-login a.forget,
+main .qcont section.form-login.page-user a.forget,
+main .qcont section.page-user.form-login a.forget,
+main .qcont section.page-user.page-user a.forget,
+main .qcont section.locate.form-login a.forget,
+main .qcont section.locate.page-user a.forget {
+  float: right;
+  font-size: 14px;
+  color: steelblue;
+  font-weight: normal;
+  text-decoration: none;
+}
+@media only screen and (max-width: 766px) {
+  main .qcont section.description.form-login a.forget, main .qcont section.description.page-user a.forget,
+main .qcont section.form-login.form-login a.forget,
+main .qcont section.form-login.page-user a.forget,
+main .qcont section.page-user.form-login a.forget,
+main .qcont section.page-user.page-user a.forget,
+main .qcont section.locate.form-login a.forget,
+main .qcont section.locate.page-user a.forget {
+    padding: 10px;
+    display: block;
+  }
+}
+main .qcont section.description.form-login .btn-submit, main .qcont section.description.page-user .btn-submit,
+main .qcont section.form-login.form-login .btn-submit,
+main .qcont section.form-login.page-user .btn-submit,
+main .qcont section.page-user.form-login .btn-submit,
+main .qcont section.page-user.page-user .btn-submit,
+main .qcont section.locate.form-login .btn-submit,
+main .qcont section.locate.page-user .btn-submit {
+  border: 0;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  background: var(--bg-page);
+}
+main .qcont section.description.form-login .jobs .job, main .qcont section.description.page-user .jobs .job,
+main .qcont section.form-login.form-login .jobs .job,
+main .qcont section.form-login.page-user .jobs .job,
+main .qcont section.page-user.form-login .jobs .job,
+main .qcont section.page-user.page-user .jobs .job,
+main .qcont section.locate.form-login .jobs .job,
+main .qcont section.locate.page-user .jobs .job {
+  float: left;
+  padding: 5px;
+  display: block;
+  position: relative;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  -webkit-box-shadow: 3px 3px 3px #CCCCCC;
+          box-shadow: 3px 3px 3px #CCCCCC;
+}
+main .qcont section.description.form-login .jobs .job h3.title, main .qcont section.description.page-user .jobs .job h3.title,
+main .qcont section.form-login.form-login .jobs .job h3.title,
+main .qcont section.form-login.page-user .jobs .job h3.title,
+main .qcont section.page-user.form-login .jobs .job h3.title,
+main .qcont section.page-user.page-user .jobs .job h3.title,
+main .qcont section.locate.form-login .jobs .job h3.title,
+main .qcont section.locate.page-user .jobs .job h3.title {
+  margin: 0;
+  padding: 5px 0px;
+  color: var(--bg-page);
+}
+main .qcont section.description.form-login .jobs .btn, main .qcont section.description.page-user .jobs .btn,
+main .qcont section.form-login.form-login .jobs .btn,
+main .qcont section.form-login.page-user .jobs .btn,
+main .qcont section.page-user.form-login .jobs .btn,
+main .qcont section.page-user.page-user .jobs .btn,
+main .qcont section.locate.form-login .jobs .btn,
+main .qcont section.locate.page-user .jobs .btn {
+  margin: 5px;
+  float: left;
+  padding: 10px;
+  color: #FFFFFF;
+  text-decoration: none;
+  background: var(--bg-page);
+}
+main .qcont section.description.page-user,
+main .qcont section.form-login.page-user,
+main .qcont section.page-user.page-user,
+main .qcont section.locate.page-user {
+  width: 100%;
+}
+main .qcont section.description.page-user .menu-user ul,
+main .qcont section.form-login.page-user .menu-user ul,
+main .qcont section.page-user.page-user .menu-user ul,
+main .qcont section.locate.page-user .menu-user ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+main .qcont section.description.page-user .menu-user ul li,
+main .qcont section.form-login.page-user .menu-user ul li,
+main .qcont section.page-user.page-user .menu-user ul li,
+main .qcont section.locate.page-user .menu-user ul li {
+  display: block;
+  border-bottom: 1px solid #CCCCCC;
+}
+main .qcont section.description.page-user .menu-user ul li a,
+main .qcont section.form-login.page-user .menu-user ul li a,
+main .qcont section.page-user.page-user .menu-user ul li a,
+main .qcont section.locate.page-user .menu-user ul li a {
+  width: 100%;
+  padding: 5px;
+  color: inherit;
+  display: block;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+main .qcont section.description.page-user .menu-user ul li a:hover, main .qcont section.description.page-user .menu-user ul li a.active,
+main .qcont section.form-login.page-user .menu-user ul li a:hover,
+main .qcont section.form-login.page-user .menu-user ul li a.active,
+main .qcont section.page-user.page-user .menu-user ul li a:hover,
+main .qcont section.page-user.page-user .menu-user ul li a.active,
+main .qcont section.locate.page-user .menu-user ul li a:hover,
+main .qcont section.locate.page-user .menu-user ul li a.active {
+  color: #CCCCCC;
+  padding: 5px 10px;
+}
+main .qcont section.description.page-user .data-display,
+main .qcont section.form-login.page-user .data-display,
+main .qcont section.page-user.page-user .data-display,
+main .qcont section.locate.page-user .data-display {
+  padding: 5px 10px;
+  border-left: 1px solid #CCCCCC;
+}
+@media only screen and (max-width: 766px) {
+  main .qcont section.description.page-user .data-display,
+main .qcont section.form-login.page-user .data-display,
+main .qcont section.page-user.page-user .data-display,
+main .qcont section.locate.page-user .data-display {
+    padding: 5px;
+    border-left: none;
+  }
+}
+main .qcont section.description.page-user .data-display .doc,
+main .qcont section.form-login.page-user .data-display .doc,
+main .qcont section.page-user.page-user .data-display .doc,
+main .qcont section.locate.page-user .data-display .doc {
+  float: left;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  border: 1px solid #CCCCCC;
+}
+@media only screen and (max-width: 766px) {
+  main .qcont section.description.page-user .data-display .doc,
+main .qcont section.form-login.page-user .data-display .doc,
+main .qcont section.page-user.page-user .data-display .doc,
+main .qcont section.locate.page-user .data-display .doc {
+    border: none;
+  }
+}
+main .qcont section.description.page-user .data-display .doc .element,
+main .qcont section.form-login.page-user .data-display .doc .element,
+main .qcont section.page-user.page-user .data-display .doc .element,
+main .qcont section.locate.page-user .data-display .doc .element {
+  width: 100%;
+  float: left;
+  display: block;
+  border-bottom: 1px solid #CCCCCC;
+}
+main .qcont section.description.page-user .data-display .doc .element:last-child,
+main .qcont section.form-login.page-user .data-display .doc .element:last-child,
+main .qcont section.page-user.page-user .data-display .doc .element:last-child,
+main .qcont section.locate.page-user .data-display .doc .element:last-child {
+  border-bottom: none;
+}
+@media only screen and (max-width: 766px) {
+  main .qcont section.description.page-user .data-display .doc .element,
+main .qcont section.form-login.page-user .data-display .doc .element,
+main .qcont section.page-user.page-user .data-display .doc .element,
+main .qcont section.locate.page-user .data-display .doc .element {
+    margin: 5px 0px;
+    border: 1px solid #CCCCCC;
+  }
+  main .qcont section.description.page-user .data-display .doc .element.title,
+main .qcont section.form-login.page-user .data-display .doc .element.title,
+main .qcont section.page-user.page-user .data-display .doc .element.title,
+main .qcont section.locate.page-user .data-display .doc .element.title {
+    display: none;
+  }
+}
+main .qcont section.description.page-user .data-display .doc .element .name,
+main .qcont section.description.page-user .data-display .doc .element .date,
+main .qcont section.form-login.page-user .data-display .doc .element .name,
+main .qcont section.form-login.page-user .data-display .doc .element .date,
+main .qcont section.page-user.page-user .data-display .doc .element .name,
+main .qcont section.page-user.page-user .data-display .doc .element .date,
+main .qcont section.locate.page-user .data-display .doc .element .name,
+main .qcont section.locate.page-user .data-display .doc .element .date {
+  padding: 10px;
+  border-right: 1px solid #CCCCCC;
+}
+@media only screen and (max-width: 766px) {
+  main .qcont section.description.page-user .data-display .doc .element .name,
+main .qcont section.description.page-user .data-display .doc .element .date,
+main .qcont section.form-login.page-user .data-display .doc .element .name,
+main .qcont section.form-login.page-user .data-display .doc .element .date,
+main .qcont section.page-user.page-user .data-display .doc .element .name,
+main .qcont section.page-user.page-user .data-display .doc .element .date,
+main .qcont section.locate.page-user .data-display .doc .element .name,
+main .qcont section.locate.page-user .data-display .doc .element .date {
+    border-right: 0;
+    border-bottom: 1px solid #CCCCCC;
+  }
+}
+main .qcont section.description.page-user .data-display .doc .element.title,
+main .qcont section.form-login.page-user .data-display .doc .element.title,
+main .qcont section.page-user.page-user .data-display .doc .element.title,
+main .qcont section.locate.page-user .data-display .doc .element.title {
+  border: 1px solid #1A1A1A;
+}
+main .qcont section.description.page-user .data-display .doc .element.title .name,
+main .qcont section.description.page-user .data-display .doc .element.title .date,
+main .qcont section.form-login.page-user .data-display .doc .element.title .name,
+main .qcont section.form-login.page-user .data-display .doc .element.title .date,
+main .qcont section.page-user.page-user .data-display .doc .element.title .name,
+main .qcont section.page-user.page-user .data-display .doc .element.title .date,
+main .qcont section.locate.page-user .data-display .doc .element.title .name,
+main .qcont section.locate.page-user .data-display .doc .element.title .date {
+  border-color: #1A1A1A;
+}
+main .qcont section.description.page-user .data-display .doc .element .btn,
+main .qcont section.form-login.page-user .data-display .doc .element .btn,
+main .qcont section.page-user.page-user .data-display .doc .element .btn,
+main .qcont section.locate.page-user .data-display .doc .element .btn {
+  text-align: center;
+}
+main .qcont section.description.page-user .data-display .doc .element .btn a,
+main .qcont section.form-login.page-user .data-display .doc .element .btn a,
+main .qcont section.page-user.page-user .data-display .doc .element .btn a,
+main .qcont section.locate.page-user .data-display .doc .element .btn a {
+  width: 100%;
+  padding: 10px;
+  display: block;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: var(--bg-page);
+}
+main .qcont section.description.page-user .data-display .doc .element .state,
+main .qcont section.form-login.page-user .data-display .doc .element .state,
+main .qcont section.page-user.page-user .data-display .doc .element .state,
+main .qcont section.locate.page-user .data-display .doc .element .state {
+  padding: 10px;
+  color: #FFFFFF;
+}
+main .qcont section.description.page-user .data-display .doc .element .state.pending,
+main .qcont section.form-login.page-user .data-display .doc .element .state.pending,
+main .qcont section.page-user.page-user .data-display .doc .element .state.pending,
+main .qcont section.locate.page-user .data-display .doc .element .state.pending {
+  background: red;
+}
+main .qcont section.description.page-user .data-display .doc .element .state.send,
+main .qcont section.form-login.page-user .data-display .doc .element .state.send,
+main .qcont section.page-user.page-user .data-display .doc .element .state.send,
+main .qcont section.locate.page-user .data-display .doc .element .state.send {
+  background: steelblue;
+}
+main .qcont section.description.page-user .data-display .doc .element .state.success,
+main .qcont section.form-login.page-user .data-display .doc .element .state.success,
+main .qcont section.page-user.page-user .data-display .doc .element .state.success,
+main .qcont section.locate.page-user .data-display .doc .element .state.success {
+  background: green;
+}
+main .qcont section.description.page-user .data-display .embed,
+main .qcont section.form-login.page-user .data-display .embed,
+main .qcont section.page-user.page-user .data-display .embed,
+main .qcont section.locate.page-user .data-display .embed {
+  float: left;
+  width: 100%;
+  height: auto;
+  margin: 10px;
+  padding: 10px;
+  display: block;
+}
+@media only screen and (max-width: 766px) {
+  main .qcont section.description.page-user .data-display .embed,
+main .qcont section.form-login.page-user .data-display .embed,
+main .qcont section.page-user.page-user .data-display .embed,
+main .qcont section.locate.page-user .data-display .embed {
+    margin: 0;
+    padding: 0;
+  }
+}
+main .qcont section.description p,
+main .qcont section.form-login p,
+main .qcont section.page-user p,
+main .qcont section.locate p {
+  text-align: justify;
+}
+main .qcont section.page-user h1.title {
+  margin: 0;
+}
+main .qcont .form-control {
+  outline: none;
+  color: #5f6a7d;
+  padding: 0 10px;
+  font-size: 13px;
+  min-height: 42px;
+  background: #fff;
+  line-height: 22px;
+  border-radius: 3px;
+  border: 1px solid #cccccc;
+}
+
+footer {
+  width: 100%;
+  float: left;
+  color: #FFFFFF;
+  display: block;
+}
+footer .footer-nav,
+footer .footer-copy {
+  width: 100%;
+  float: left;
+  padding: 10px;
+  display: block;
+}
+footer .footer-nav .copyright,
+footer .footer-copy .copyright {
+  text-align: center;
+}
+footer .footer-nav a,
+footer .footer-copy a {
+  width: auto;
+  color: inherit;
+  padding: 5px 10px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+footer .footer-nav a:hover,
+footer .footer-copy a:hover {
+  color: #9C9C9C;
+}
+footer .footer-copy {
+  padding: 0px;
+  background: #1A1A1A;
+}
+@media only screen and (max-width: 766px) {
+  footer .footer-copy {
+    margin: 0;
+    font-size: 13px;
+    display: inline-block;
+  }
+  footer .footer-copy .copyright {
+    padding: 0;
+    display: inline-block;
+  }
+  footer .footer-copy .copyright p {
+    margin: 0;
+    padding: 5px 0px;
+  }
+  footer .footer-copy a {
+    display: inline-block;
+  }
+}
+footer .qcol-2,
+footer .qcol-3,
+footer .qcol-4 {
+  padding: 5px;
+  text-align: center;
+}
+footer .qcol-2 img,
+footer .qcol-3 img,
+footer .qcol-4 img {
+  width: 50%;
+}
+footer .qcol-2 ul,
+footer .qcol-3 ul,
+footer .qcol-4 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+footer .qcol-2 ul a,
+footer .qcol-3 ul a,
+footer .qcol-4 ul a {
+  display: block;
+}
+footer .logos ul li {
+  width: 50%;
+  float: left;
+  display: inline-block;
+}
+footer .logos ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer .logos ul li img {
+  height: 100%;
+  max-width: 100%;
+  max-height: 75px;
+}
+footer .logos ul li img.talulah {
+  width: 100%;
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+}
+/*# sourceMappingURL=style.min.css.map */

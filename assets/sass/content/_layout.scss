@@ -1,0 +1,68 @@
+// ESTILOS DE LAYOUT
+.center {
+	clear: both;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	align-items: center;
+	align-content: center;
+	-ms-flex-align: center;
+	-webkit-box-align: center;
+	-ms-flex-line-pack: center;
+}
+
+.left {
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.full {
+	width: 100%;
+	clear: both;
+}
+//Alineaciones de texto
+.center-text,
+.text-center {
+	text-align: center;
+}
+
+.left-text,
+.text-left {
+	text-align: left;
+}
+
+.right-text,
+.text-right {
+	text-align: right;
+}
+
+//Display
+.dp-none{
+	display: none;
+	visibility: none;
+}
+
+.dp-block{
+	display: block;
+}
+
+.dp-inline{
+	display: inline;
+}
+
+.dp-inline-block{
+	display: inline-block;
+}
+
+.dp-grid{
+	display: grid;
+}
+
+.dp-flex{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+@import "forms";

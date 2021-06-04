@@ -1,0 +1,57 @@
+extends inc/_plantilla
+block content
+	main
+		.qcont
+			section.page-user.left
+				h1.title Perfil <span class="date">Año 2019</span>
+				.qcol-2
+					.menu-user
+						ul
+							li
+								a(href="#") Catálogo
+							li
+								a(href="#") Mis pedidos
+							li
+								a(href="#").active Nuevo pedido
+							li
+								a(href="#") Editar mi información
+				.qcol-8.data-display
+					include inc/_perfil-catalogo
+					include inc/_perfil-pedidos
+					include inc/_perfil-nuevo
+					include inc/_perfil-info
+block JsFooter
+	script(src="assets/js/qc.addItem.js")
+	script(src="assets/js/jquery.formatCurrency-1.4.0.min.js", type="text/javascript")
+	script(src="assets/js/jquery.formatCurrency.es-CO.js", type="text/javascript")
+	script.
+		var options = {
+			id: "div_",
+			icon: "trash",
+			form: "#pedidos-user",
+			btn : ".addButton",
+			rmBtn: ".removeButton",
+			addClass : "btn-danger",
+			removeClass : "btn-info",
+		};
+		$(document).addItem(options);
+		function calcular_total() {
+			var add = 0;
+			$(".price-element").each(function() {
+				add += Math.floor(Number($(this).attr("data-total")));
+			});
+			$(".total-sum").attr("data-price", add).text(add);
+			format($(".total-sum"));
+		}
+		$("#sumar").on("click", calcular_total);
+		$(".cant-element").on("change",function(){
+			var el = $(this),
+				cant = el.val(),
+				divPa = el.parent().parent().find(".price-element"),
+				price = divPa.attr("data-price"),
+				price_el = price*cant;
+				
+				divPa.html(price_el).attr("data-total", price_el);
+				format(divPa);
+				calcular_total();
+		});

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+$css-grid: 			qcol;
+$css-cont: 			qcont;
+$css-icon: 			qicon;
+$qicon-height-base: 1;
+$qicon-size-base:   14px;
+$icon-path: 		"../fonts/";
+$icon-font-name: 	"qicon-webfont";
+$font-version: 		"4.7.0";
+$max-width : 		1200px;
+
+@import "content/reset";
+@import "content/layout";
+@import "content/grid";
+@import "content/icons"

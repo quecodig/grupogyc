@@ -1,0 +1,100 @@
+<!DOCTYPE html5>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta property="og:type" content="website"/>
+    <meta name="MobileOptimized" content="width"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Inicio - Grupo G&amp;C</title>
+    <link rel="stylesheet" href="assets/css/style.min.css?v=1.0.0.21"/>
+    <link rel="icon" type="image/png" href="assets/img/favicon.png"/>
+  </head>
+  <body>
+    <header>
+      <div class="users">
+        <div class="qcont">
+          <ul class="social">
+            <li><a href="#">
+                <div class="qicon-facebook"></div></a></li>
+            <li><a href="#">
+                <div class="qicon-twitter"></div></a></li>
+            <li><a href="#">
+                <div class="qicon-instagram"></div></a></li>
+          </ul>
+          <ul class="login">
+            <li><a class="hidden" href="login.html"><i class="qicon-user"></i>Entrar</a></li>
+            <li><a href="perfil.html"><i class="qicon-user"></i>Mi perfil</a></li>
+            <li><a href="perfil.html"><i class="qicon-times"></i>Cerrar sesión</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="qcont">
+        <div class="logos">
+          <div class="left"><a class="logo" href="index.html"><img src="assets/img/logos/logo_grupo_gyc.png" alt=""/></a></div>
+          <div class="right"><a class="logo" href="https://talulah.com.co/" target="_blank"><img class="talulah" src="assets/img/logos/logo_talulah.png" alt=""/></a><a class="logo" href="https://navala.com.co/" target="_blank"><img class="navala" src="assets/img/logos/logo_navala.png" alt=""/></a></div>
+        </div>
+      </div>
+      <nav class="navegation_menu">
+        <div class="qcont"><a class="nav_collapse" href="#" id="nav_mobile"><i class="qicon-bars"></i></a>
+          <ul id="nav-mobile">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">Quiénes somos</a>
+              <ul>
+                <li><a href="mision.html">Misión</a></li>
+                <li><a href="vision.html">Visión</a></li>
+              </ul>
+            </li>
+            <li><a href="locate.html">Dónde estamos</a></li>
+            <li><a href="job.html">¿Quieres ser Empresari@?</a></li>
+            <li><a href="mailto:servicio.cliente@grupogyc.co">Servicio al cliente</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <footer>
+      <div class="footer-nav">
+        <div class="qcont">
+          <div class="qcol-4"><img src="assets/img/logos/logo_grupo_gyc.png" alt="Logo Grupo G Y C"/></div>
+          <div class="qcol-2">
+            <ul>
+              <li><a href="about.html">Quiénes Somos</a></li>
+              <li><a href="mision.html">Misión</a></li>
+              <li><a href="vision.html">Visión</a></li>
+            </ul>
+          </div>
+          <div class="qcol-4 logos">
+            <ul>
+              <li><a class="logo" href="https://talulah.com.co/" target="_blank"><img class="talulah" src="assets/img/logos/logo_talulah.png" alt=""/></a></li>
+              <li><a class="logo" href="https://navala.com.co/" target="_blank"><img class="navala" src="assets/img/logos/logo_navala.png" alt=""/></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copy">
+        <div class="qcont">
+          <div class="qcol-10 copyright">
+            <p>Todos los derechos reservados &copy; Grupo G&C S.A.S</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script>
+      $(document).ready(main);
+      var $win = $(window);
+      var contador = 0;
+      function main(){
+      	$('#nav_mobile').on("click", function(){
+      		var $posM = $('.navegation_menu').offset().top;
+      		var $altM = $('.navegation_menu').height();
+      		if ($win.scrollTop() <= $posM){
+      			$('#nav-mobile').css('top', ($posM+$altM)).slideToggle("Slow");
+      		}else{
+      			$('#nav-mobile').css('top', ($altM)).slideToggle("Slow");
+      		}
+      		return false;
+      	});
+      };
+    </script>
+  </body>
+</html>

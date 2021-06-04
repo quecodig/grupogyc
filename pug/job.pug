@@ -1,0 +1,39 @@
+extends inc/_plantilla
+block content
+	main
+		.qcont
+			section.form-login
+				h1.title Dejanos conocerte
+				.content-columms.x1
+					form(action="job.php", class="form-content", id="job-user", autocomplete="off", method="POST", enctype="multipart/form-data")
+						.form-group
+							label(for="name") Nombre Completo
+							input(type="text", name="name", id="name", class="form-control")
+						.form-group
+							label(for="number") Celular
+							input(type="text", name="number", id="number", class="form-control")
+						.form-group
+							label(for="email") Correo electrónico
+							input(type="text", name="email", id="email", class="form-control")
+						.form-group
+							label(for="archive") Hoja de Vida
+							button(type="button", id="btn-adj", onclick="document.getElementById('archive').click()").form-control Adjuntar
+							input(type="file", accept="application/pdf,application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document", name="archive", id="archive", style="display: none")
+						.form-group
+							input(type="submit", value="Enviar solicitud", class="btn-submit")
+				.content-columms.x2
+					.jobs
+						h2.title Ofertas laborales
+						//-for (var i = 2 - 1; i >= 0; i--) {
+							.job
+								h3.title Lorem ipsum dolor sit amet.
+								p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta possimus ratione recusandae obcaecati libero velit, fugit.
+								a(href="#").btn Ver oferta
+						//-}
+						a.btn(href="#") Ver todas las ofertas.
+block JsFooter
+	script.
+		document.getElementById('archive').onchange = function () {
+			console.log(this.value);
+			document.getElementById('btn-adj').innerHTML = document.getElementById('archive').files[0].name;
+		}

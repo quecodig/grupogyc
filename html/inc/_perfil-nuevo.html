@@ -1,0 +1,54 @@
+
+<h2>Nuevo pedido</h2>
+<p>Recuerde tener sus datos actualizados, para evitar que no reciba sus pedidos.</p>
+<form class="form-content pedidos" action="#" id="pedidos-user">
+  <div class="content-pedido">
+    <table>
+      <thead>
+        <tr>
+          <th>Código del artiulo</th>
+          <th>Cantidad</th>
+          <th>Buscar</th>
+          <th>Nombre del artículo</th>
+          <th>Precio</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody class="element-clone">
+        <tr class="form-group hidden" id="div_0">
+          <td>
+            <input class="form-control" type="text" name="materiales[]" placeholder="code"/>
+          </td>
+          <td>
+            <input class="form-control cant-element" type="number" name="cant[]" min="1" pattern="^[0-9]+" placeholder="Cant." style="width: 100px"/>
+          </td>
+          <td>
+            <button class="form-control" type="button"><i class="qicon-search"></i></button>
+          </td>
+          <td class="name-element"></td>
+          <td class="price-element" data-price="0" data-total="0">0</td>
+          <td>
+            <button class="form-control removeButton" type="button" id="1"><i class="qicon-trash"></i></button>
+          </td>
+        </tr>
+        <tr>
+          <td COLSPAN="4"></td>
+          <td>
+            <div>Total: <span class="total-sum">$ 0</span></div>
+          </td>
+          <td>
+            <button class="form-control" type="button" id="sumar">Sumar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="form-control addButton" type="button"><i class="qicon-plus"></i>&nbsp;Añadir</button>
+  </div>
+  <div class="form-group">
+    <label for="password">Contraseña</label>
+    <input class="form-control" type="password" name="password" id="password"/>
+  </div>
+  <div class="form-group">
+    <input class="btn-submit" type="submit" value="Realizar pedido"/>
+  </div>
+</form>

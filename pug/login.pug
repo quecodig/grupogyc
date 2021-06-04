@@ -1,0 +1,28 @@
+extends inc/_plantilla
+block content
+	main
+		.qcont
+			section.form-login
+				h1.title Acceso del empresari@
+				form(action="#", class="form-content" id="login-user")
+					.form-group
+						label(for="username") Correo electrónico
+						input(type="email", name="username", id="username", class="form-control")
+					.form-group
+						label(for="password") Contraseña
+						a(href="#", class="forget") ¿Olvidaste la contraseña?
+						input(type="password", name="password", id="password", class="form-control")
+					.form-group
+						input(type="submit", value="Iniciar sesión", class="btn-submit")
+						a(href="job.html", class="forget") ¿Nuevo cliente? Trabaje con nosotros
+
+				form(action="#", class="form-content hidden", id="forget-user")
+					.form-group
+						label(for="username") Correo electrónico
+						input(type="email", name="username", id="username", class="form-control")
+					p(style="text-align: left") Te enviaremos un correo electrónico para restablecer la contraseña.
+					.form-group
+						input(type="submit", value="Enviar", class="btn-submit")
+						span(style="margin-left: 15px;line-height: 2;") ó
+						a(href="#", style="text-decoration: none;color:steelblue;margin-left: 10px;line-height: 2.5;") Cancelar
+block JsFooter

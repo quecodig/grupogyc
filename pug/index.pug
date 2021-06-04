@@ -1,0 +1,30 @@
+extends inc/_plantilla
+block content
+	main.home-page
+		section.slide
+			.slider-container
+				ul.slider-wrapper#slider
+					li.slide-current
+						a(href="https://talulah.com.co/" target="_blank")
+							img(src="assets/img/slider/Slider-01-min.jpg?v=2")
+					li
+						a(href="https://talulah.com.co/" target="_blank")
+							img(src="assets/img/slider/Slider-02-min.jpg?v=2")
+					li
+						a(href="job.html")
+							img(src="assets/img/slider/Slider-03-min.jpg?v=3.1")
+					li
+						a(href="https://navala.com.co/" target="_blank")
+							img(src="assets/img/slider/Slider-04-min.jpg?v=2")
+				.drt-control.control-left#lft-control
+					i.qicon-chevron-left
+				.drt-control.control-right#rht-control
+					i.qicon-chevron-right
+				ul.slider-controls#slider-controls
+				.tempo-bar#barra
+block JsFooter
+	script(type="text/javascript", src="assets/js/qcslider.jquery.js")
+	script.
+		$(document).ready(function($){
+			$("#slider").QCslider({duration: 3000});
+		});
